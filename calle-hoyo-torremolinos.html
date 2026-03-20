@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    ══════════════════════════════════════════════════════════════
+    INSTRUCCIONES PARA PERSONALIZAR ESTA PLANTILLA
+    ══════════════════════════════════════════════════════════════
+    Busca y reemplaza estas etiquetas en toda la página:
+
+    Calle Hoyo     → Ej: Calle San Miguel
+    calle-hoyo → Ej: calle-san-miguel  (sin tildes, con guiones)
+    el centro de Torremolinos, muy cerca de la Calle San Miguel             → Ej: Centro de Torremolinos / La Carihuela / El Bajondillo
+    [DESCRIPCION_ZONA] → 2-3 frases sobre la zona: playa cercana, ambiente, etc.
+    Playa del Bajondillo (aprox. 500 m a pie, 7 min)    → Ej: Playa de la Carihuela (5 min a pie)
+    tent Torremolinos hotel 3★ a 91 m (piscina, brunch, solárium). Farmacia Moreno de Torres a 56 m. Mesón Galego Antoxo a 265 m. Entreplaza a 305 m. Center Vithas Salud a 138 m. Parking El Congreso a 196 m     → Ej: Chiringuitos y restaurantes de marisco
+    Parada Hoyo a 1 m (prácticamente en la puerta) con L-304, M-110, M-120, M-112, M-121, M-123, M-124, M-125, M-126, T-1, T-2, M-320. Terminal Torremolinos a 131 m (3 min). Estación Cercanías Torremolinos (C-1) a 6 min a pie       → Ej: Parada de bus línea 1 a 100 metros
+    Pleno centro. Biblioteca Municipal Pablo Ruiz Picasso a 316 m · Plaza Costa del Sol a 365 m · Plaza de Andalucía a 415 m · Centro Cultural Pablo Ruiz Picasso a 130 m → Ej: 10 minutos a pie del centro
+    [MAPS_EMBED_URL]   → URL del iframe de Google Maps de esa calle
+    foto-calle-hoyo-torremolinos.jpg       → Nombre del archivo de tu foto: foto-calle-san-miguel.jpg
+    ══════════════════════════════════════════════════════════════
+  -->
+
+  <title>Apartamentos Turísticos en Calle Hoyo, Torremolinos | Torremolinos Gestión Vacacional</title>
+  <meta name="description" content="¿Tienes un apartamento en Calle Hoyo, Torremolinos? Gestión profesional de apartamentos turísticos en pleno centro. A 900 m de la Playa del Bajondillo. Consulta gratuita.">
+  <meta name="keywords" content="apartamentos turísticos Calle Hoyo Torremolinos, gestión vacacional Calle Hoyo, alquiler vacacional Torremolinos centro, gestor apartamentos Calle Hoyo">
+
+  <!-- Schema markup LocalBusiness — SEO LOCAL -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Torremolinos Gestión Vacacional",
+    "description": "Gestión profesional de apartamentos turísticos en Calle Hoyo, Torremolinos",
+    "url": "https://sites.google.com/view/gestion-apartamentos-torremolinos/calles/calle-hoyo",
+    "telephone": "+34603658260",
+    "email": "info@gestion-apartamentos-turisticos-torremolinos.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "C. Campillos, 10",
+      "addressLocality": "Torremolinos",
+      "addressRegion": "Málaga",
+      "addressCountry": "ES"
+    },
+    "areaServed": {
+      "@type": "Place",
+      "name": "Calle Hoyo, Torremolinos, Málaga"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "36.6213",
+      "longitude": "-4.4996"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --sand: #E8DDD0;
+      --sand-light: #F5F0EA;
+      --ocean: #1A4A6B;
+      --ocean-deep: #0D2E45;
+      --turquoise: #3AAFA9;
+      --gold: #C9963A;
+      --white: #FDFAF6;
+      --text: #1C1C1C;
+      --text-muted: #6B6560;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--white);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: relative;
+      padding: 1.2rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(253,250,246,0.98);
+      border-bottom: 1px solid rgba(201,150,58,0.15);
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--ocean-deep);
+      text-decoration: none;
+    }
+    .nav-logo span { color: var(--gold); }
+
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; flex-wrap: wrap; }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--ocean); }
+    .nav-links a.active { color: var(--ocean); border-bottom: 2px solid var(--gold); padding-bottom: 2px; }
+    .nav-cta { background: var(--ocean) !important; color: var(--white) !important; padding: 0.65rem 1.5rem; }
+    .nav-cta:hover { background: var(--gold) !important; }
+
+    /* ── BREADCRUMB ── */
+    .breadcrumb {
+      padding: 0.9rem 3rem;
+      background: var(--sand-light);
+      border-bottom: 1px solid var(--sand);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+    .breadcrumb a:hover { color: var(--gold); }
+    .breadcrumb .sep { color: var(--sand-dark, #C9B99A); }
+    .breadcrumb .current { color: var(--ocean-deep); font-weight: 500; }
+
+    /* ── HERO CALLE ── */
+    .hero-calle {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 60vh;
+    }
+
+    .hero-calle-left {
+      background: var(--ocean-deep);
+      padding: 5rem 5rem 4rem 6rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-calle-left::after {
+      content: '';
+      position: absolute;
+      right: -60px; top: 0; bottom: 0;
+      width: 120px;
+      background: var(--ocean-deep);
+      clip-path: polygon(0 0, 0 100%, 100% 100%);
+      z-index: 2;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .hero-eyebrow::before { content: ''; display: block; width: 2rem; height: 1px; background: var(--gold); }
+
+    .hero-calle-left h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 3.5vw, 3.5rem);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-calle-left h1 em { font-style: italic; color: var(--turquoise); }
+
+    .hero-calle-left p {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.6);
+      font-weight: 300;
+      max-width: 400px;
+      margin-bottom: 2.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-calle-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--gold);
+      color: var(--white);
+      padding: 1rem 2rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.25s;
+      position: relative;
+      z-index: 1;
+      width: fit-content;
+    }
+    .hero-calle-btn:hover { background: var(--turquoise); transform: translateY(-2px); }
+
+    /* Hero foto */
+    .hero-calle-right {
+      position: relative;
+      overflow: hidden;
+      background: var(--sand);
+    }
+
+    .hero-calle-right img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    /* Placeholder si no hay foto */
+    .photo-placeholder {
+      width: 100%;
+      height: 100%;
+      min-height: 400px;
+      background: var(--sand);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      color: var(--text-muted);
+    }
+    .photo-placeholder .ph-icon { font-size: 3rem; opacity: 0.4; }
+    .photo-placeholder p { font-size: 0.85rem; opacity: 0.6; text-align: center; max-width: 200px; }
+
+    .photo-badge {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 1.5rem;
+      background: var(--ocean-deep);
+      color: var(--white);
+      padding: 0.5rem 1rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    /* ── DATOS DE LA ZONA ── */
+    .section-zona {
+      padding: 5rem 8rem;
+      background: var(--white);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: start;
+    }
+
+    .zona-text {}
+
+    .section-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .section-label::before { content: ''; display: block; width: 2rem; height: 1px; background: var(--gold); }
+
+    .zona-text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+      font-weight: 700;
+      color: var(--ocean-deep);
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      text-align: justify;
+      text-align-last: left;
+    }
+
+    h1, h2, h3, h4, h5, h6,
+    .hero-eyebrow, .section-label, .section-title,
+    .zona-info-text, .cta-calle-title, .cta-detail,
+    .related-card, .street-card, .breadcrumb,
+    .nav-logo, .nav-links, .footer-logo, .footer-links,
+    .photo-badge, .servicio-card h3, .hero-calle-left h1 {
+      text-align: left !important;
+      text-align-last: left !important;
+    }
+
+    .zona-text p {
+      font-size: 0.97rem;
+      line-height: 1.85;
+      color: var(--text-muted);
+      font-weight: 300;
+      margin-bottom: 1.2rem;
+      padding-right: 1rem;
+    }
+
+    /* Info rápida de la zona */
+    .zona-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      background: var(--sand-light);
+      border: 1px solid var(--sand);
+    }
+
+    .zona-info-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.4rem 1.8rem;
+      border-bottom: 1px solid var(--sand);
+      transition: background 0.2s;
+    }
+    .zona-info-row:last-child { border-bottom: none; }
+    .zona-info-row:hover { background: var(--white); }
+
+    .zona-info-icon {
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    .zona-info-text strong {
+      display: block;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      font-weight: 500;
+      margin-bottom: 0.15rem;
+    }
+
+    .zona-info-text span {
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+
+    /* ── MAPA DE GOOGLE ── */
+    .section-mapa {
+      padding: 0 8rem 5rem;
+      background: var(--white);
+    }
+
+    .section-mapa .section-label { margin-bottom: 1.5rem; }
+
+    .mapa-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--ocean-deep);
+      margin-bottom: 1.5rem;
+    }
+
+    .mapa-wrap {
+      width: 100%;
+      height: 420px;
+      border: 1px solid var(--sand);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .mapa-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    /* Placeholder mapa */
+    .mapa-placeholder {
+      width: 100%;
+      height: 420px;
+      background: var(--sand-light);
+      border: 1px solid var(--sand);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      color: var(--text-muted);
+    }
+    .mapa-placeholder .ph-icon { font-size: 3rem; opacity: 0.4; }
+    .mapa-placeholder p { font-size: 0.85rem; opacity: 0.7; text-align: center; max-width: 280px; }
+    .mapa-placeholder code {
+      background: var(--sand);
+      padding: 0.3rem 0.6rem;
+      font-size: 0.75rem;
+      color: var(--ocean);
+    }
+
+    /* ── SERVICIOS EN ESTA CALLE ── */
+    .section-servicios {
+      padding: 6rem 8rem;
+      background: var(--sand-light);
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-weight: 700;
+      color: var(--ocean-deep);
+      line-height: 1.15;
+      max-width: 600px;
+      margin-bottom: 3rem;
+    }
+
+    .servicios-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      background: var(--sand);
+    }
+
+    .servicio-card {
+      background: var(--white);
+      padding: 2rem 2rem;
+      position: relative;
+      overflow: hidden;
+      transition: background 0.3s;
+    }
+    .servicio-card:hover { background: var(--sand-light); }
+
+    .servicio-card::before {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--turquoise);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s;
+    }
+    .servicio-card:hover::before { transform: scaleX(1); }
+
+    .servicio-icon { font-size: 1.8rem; margin-bottom: 0.9rem; display: block; }
+
+    .servicio-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--ocean-deep);
+      margin-bottom: 0.5rem;
+    }
+
+    .servicio-card p { font-size: 0.85rem; line-height: 1.65; color: var(--text-muted); font-weight: 300; }
+
+    /* ── CTA CALLE ── */
+    .section-cta-calle {
+      padding: 6rem 8rem;
+      background: var(--ocean-deep);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: center;
+    }
+
+    .cta-calle-left {}
+
+    .cta-calle-left .section-label { color: var(--gold); }
+    .cta-calle-left .section-label::before { background: var(--gold); }
+
+    .cta-calle-left h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 1.2rem;
+    }
+    .cta-calle-left h2 em { font-style: italic; color: var(--turquoise); }
+
+    .cta-calle-left p {
+      font-size: 0.97rem;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.55);
+      font-weight: 300;
+    }
+
+    .cta-calle-right {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .cta-calle-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+
+    .cta-wa-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: #25D366;
+      color: var(--white);
+      padding: 1rem 1.5rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.25s;
+      justify-content: center;
+    }
+    .cta-wa-btn:hover { background: #1ebe5d; transform: translateY(-2px); }
+
+    .cta-tel-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: transparent;
+      color: var(--white);
+      padding: 1rem 1.5rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.2);
+      transition: all 0.25s;
+      justify-content: center;
+    }
+    .cta-tel-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+    .cta-calle-details { display: flex; flex-direction: column; gap: 0.6rem; padding-top: 0.5rem; }
+
+    .cta-detail {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* ── CALLES RELACIONADAS ── */
+    .section-related {
+      padding: 5rem 8rem;
+      background: var(--white);
+    }
+
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--sand);
+      margin-top: 2rem;
+    }
+
+    .related-card {
+      background: var(--white);
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .related-card:hover { background: var(--sand-light); }
+
+    .related-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--turquoise);
+      flex-shrink: 0;
+      opacity: 0.5;
+    }
+    .related-card:hover .related-dot { opacity: 1; }
+
+    .related-card span {
+      font-size: 0.82rem;
+      color: var(--text);
+    }
+
+    .related-more {
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+
+    .btn-outline {
+      display: inline-block;
+      background: transparent;
+      color: var(--ocean);
+      padding: 0.85rem 2rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border: 1px solid var(--ocean);
+      text-decoration: none;
+      transition: all 0.25s;
+    }
+    .btn-outline:hover { background: var(--ocean); color: var(--white); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #0A1F30;
+      color: rgba(255,255,255,0.45);
+      padding: 2.5rem 4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      font-size: 0.8rem;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--white); }
+    .footer-logo span { color: var(--gold); }
+
+    .footer-links { display: flex; gap: 1.5rem; list-style: none; flex-wrap: wrap; }
+    .footer-links a { color: rgba(255,255,255,0.4); text-decoration: none; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--gold); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding-top: 1.2rem;
+      text-align: center;
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.2);
+    }
+
+    /* ── ANIMACIONES ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .hero-eyebrow { animation: fadeUp 0.7s ease both 0.1s; }
+    .hero-calle-left h1 { animation: fadeUp 0.7s ease both 0.25s; }
+    .hero-calle-left p  { animation: fadeUp 0.7s ease both 0.4s; }
+    .hero-calle-btn     { animation: fadeUp 0.7s ease both 0.55s; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1100px) {
+      nav { padding: 1.2rem 2rem; }
+      .nav-links { display: none; }
+      .hero-calle { grid-template-columns: 1fr; }
+      .hero-calle-right { min-height: 300px; }
+      .hero-calle-left { padding: 4rem 3rem; }
+      .hero-calle-left::after { display: none; }
+      .section-zona { grid-template-columns: 1fr; gap: 3rem; padding: 5rem 3rem; }
+      .section-mapa { padding: 0 3rem 4rem; }
+      .section-servicios { padding: 5rem 3rem; }
+      .servicios-grid { grid-template-columns: 1fr 1fr; }
+      .section-cta-calle { grid-template-columns: 1fr; gap: 3rem; padding: 5rem 3rem; }
+      .section-related { padding: 4rem 3rem; }
+      .related-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 600px) {
+      body { overflow-x: hidden; }
+      nav { padding: 1rem 1.5rem; }
+      .nav-logo { font-size: 1rem; }
+      .breadcrumb { padding: 0.9rem 1.5rem; }
+      .hero-calle-left { padding: 3rem 1.5rem 3rem 1.5rem; }
+      .section-zona, .section-servicios, .section-related { padding: 4rem 1.8rem; }
+      .section-mapa { padding: 0 1.8rem 3rem; }
+      .mapa-wrap, .mapa-placeholder { height: 280px; }
+      .section-cta-calle { padding: 4rem 1.8rem; }
+      .servicios-grid { grid-template-columns: 1fr; }
+      .related-grid { grid-template-columns: repeat(2, 1fr); }
+      .zona-text p, .zona-info-text span, .cta-calle-left p { padding-right: 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    Inicio
+    <span class="sep">›</span>
+    Las 150 calles
+    <span class="sep">›</span>
+    <span class="current">Calle Hoyo</span>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero-calle">
+    <div class="hero-calle-left">
+      <div class="hero-eyebrow">Apartamentos Turísticos · Torremolinos</div>
+      <h1>
+        Gestión de apartamentos en<br>
+        <em>Calle Hoyo</em>,<br>
+        Torremolinos
+      </h1>
+      <p>
+        ¿Tienes un apartamento en Calle Hoyo? Maximiza tus ingresos con el gestor
+        más local de Torremolinos. 36 años de experiencia, 87 apartamentos en gestión
+        y presencia física en menos de 10 minutos.
+      </p>
+      <a
+        href="https://wa.me/34603658260?text=Hola,%20me%20interesa%20información%20sobre%20gestión%20de%20mi%20apartamento%20en%20Calle Hoyo,%20Torremolinos"
+        target="_blank"
+        class="hero-calle-btn"
+      >
+        💬 Consulta gratuita por WhatsApp
+      </div>
+    </div>
+
+    <div class="hero-calle-right">
+      <img src="https://lh3.googleusercontent.com/pw/AP1GczOmcNC8gN0YagTXwbq-C4728CDmDLHWgytxgHCtJACZuzI7HBNHbCYw1NLXvJA9VuscoKKoKD_okNuB7acP5DkAyIBx8_WswGkRSzlM6FCluxNjwdw=w1200-h900-no" alt="Calle Hoyo, Torremolinos — Gestión apartamentos turísticos" style="width:100%;height:100%;object-fit:cover;display:block;">
+      <div class="photo-badge">📍 Calle Hoyo · Torremolinos</div>
+    </div>
+  </section>
+
+  <!-- DATOS DE LA ZONA -->
+  <section class="section-zona">
+    <div class="zona-text">
+      <div class="section-label">La zona</div>
+      <h2>Todo sobre Calle Hoyo en Torremolinos</h2>
+      <p>
+        Calle Hoyo es una calle céntrica de Torremolinos con 564 metros de longitud,
+        situada muy próxima a la Avenida del Lido y a Calle Campillos. Su posición
+        privilegiada la hace muy demandada por viajeros que buscan alojamiento bien
+        comunicado, con todos los servicios a pie de calle y acceso fácil a la playa.
+      </p>
+      <p>
+        La Playa del Bajondillo, una de las más populares de la Costa del Sol con más de
+        un kilómetro de longitud, se encuentra a aproximadamente 750 metros de la calle,
+        unos 10-12 minutos caminando por la Cuesta del Tajo o el Camino de la Playa.
+        Los apartamentos en esta zona tienen gran demanda durante todo el año gracias
+        a su céntrica ubicación y excelente conectividad.
+      </p>
+      <p>
+        Si tienes un apartamento en Calle Hoyo, podemos ayudarte a maximizar su
+        rendimiento con gestión profesional, presencia en todas las plataformas y el
+        SEO local más potente de Torremolinos. Desde nuestra oficina en C. Campillos, 10,
+        estamos a menos de 5 minutos a pie de Calle Hoyo.
+      </p>
+    </div>
+
+    <div class="zona-info">
+      <div class="zona-info-row">
+        <span class="zona-info-icon">🏖️</span>
+        <div class="zona-info-text">
+          <strong>Playa más cercana</strong>
+          <span>Playa del Bajondillo (aprox. 500 m a pie, 7 min)</span>
+        </div>
+      </div>
+      <div class="zona-info-row">
+        <span class="zona-info-icon">🍽️</span>
+        <div class="zona-info-text">
+          <strong>Restauración</strong>
+          <span>tent Torremolinos hotel 3★ a 91 m (piscina, brunch, solárium). Farmacia Moreno de Torres a 56 m. Mesón Galego Antoxo a 265 m. Entreplaza a 305 m. Center Vithas Salud a 138 m. Parking El Congreso a 196 m</span>
+        </div>
+      </div>
+      <div class="zona-info-row">
+        <span class="zona-info-icon">🚌</span>
+        <div class="zona-info-text">
+          <strong>Transporte</strong>
+          <span>Parada Hoyo a 1 m (prácticamente en la puerta) con L-304, M-110, M-120, M-112, M-121, M-123, M-124, M-125, M-126, T-1, T-2, M-320. Terminal Torremolinos a 131 m (3 min). Estación Cercanías Torremolinos (C-1) a 6 min a pie</span>
+        </div>
+      </div>
+      <div class="zona-info-row">
+        <span class="zona-info-icon">🏛️</span>
+        <div class="zona-info-text">
+          <strong>Distancia al centro</strong>
+          <span>Pleno centro. Biblioteca Municipal Pablo Ruiz Picasso a 316 m · Plaza Costa del Sol a 365 m · Plaza de Andalucía a 415 m · Centro Cultural Pablo Ruiz Picasso a 130 m</span>
+        </div>
+      </div>
+      <div class="zona-info-row">
+        <span class="zona-info-icon">⏱️</span>
+        <div class="zona-info-text">
+          <strong>Nuestra respuesta presencial</strong>
+          <span>Menos de 10 minutos desde C. Campillos, 10</span>
+        </div>
+      </div>
+      <div class="zona-info-row">
+        <span class="zona-info-icon">📊</span>
+        <div class="zona-info-text">
+          <strong>Ocupación media anual</strong>
+          <span>Hasta el 92% con gestión profesional</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAPA GOOGLE -->
+  <section class="section-mapa">
+    <div class="section-label">Ubicación exacta</div>
+    <div class="mapa-title">Dónde está Calle Hoyo en Torremolinos</div>
+
+    <!--
+      INSTRUCCIÓN para insertar el mapa:
+      1. Ve a Google Maps y busca "Calle Hoyo, Torremolinos"
+      2. Pulsa Compartir → Insertar un mapa → Copiar HTML
+      3. Sustituye el bloque .mapa-placeholder por el <iframe> que te da Google
+      
+      Ejemplo de cómo debe quedar:
+      <div class="mapa-wrap">
+        <iframe src="https://www.google.com/maps/embed?pb=..." allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    -->
+    <div class="mapa-wrap" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.5rem;background:var(--sand-light);border:1px solid var(--sand);height:280px;">
+      <div style="font-size:3rem;">🗺️</div>
+      <div style="text-align:center;">
+        <div style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--ocean-deep);margin-bottom:0.5rem;">Calle Hoyo, Torremolinos</div>
+        <div style="font-size:0.85rem;color:var(--text-muted);margin-bottom:1.5rem;">Haz clic para ver la ubicación exacta en Google Maps</div>
+        <a href="https://www.google.com/maps/search/Calle+Hoyo+Torremolinos+Málaga" target="_blank"
+           style="background:var(--gold);color:white;padding:0.85rem 2rem;text-decoration:none;font-family:'DM Sans',sans-serif;font-size:0.85rem;font-weight:500;letter-spacing:0.05em;text-transform:uppercase;display:inline-block;transition:background 0.2s;">
+          📍 Ver en Google Maps →
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS EN ESTA CALLE -->
+  <section class="section-servicios">
+    <div class="section-label">Lo que ofrecemos</div>
+    <h2 class="section-title">Gestión integral de tu apartamento en Calle Hoyo</h2>
+
+    <div class="servicios-grid">
+      <div class="servicio-card">
+        <span class="servicio-icon">📣</span>
+        <h3>Publicación optimizada</h3>
+        <p>Tu apartamento en Airbnb, Booking y más plataformas con anuncio SEO optimizado para Calle Hoyo y Torremolinos.</p>
+      </div>
+      <div class="servicio-card">
+        <span class="servicio-icon">🔑</span>
+        <h3>Check-in presencial</h3>
+        <p>Recibimos a cada huésped en persona en tu apartamento de Calle Hoyo. Nunca dejamos a nadie esperando.</p>
+      </div>
+      <div class="servicio-card">
+        <span class="servicio-icon">🧹</span>
+        <h3>Limpieza con lavandería propia</h3>
+        <p>Limpieza profesional entre estancias y ropa de cama de nuestra propia lavandería. Calidad y rapidez garantizadas.</p>
+      </div>
+      <div class="servicio-card">
+        <span class="servicio-icon">⚡</span>
+        <h3>Respuesta en &lt;10 minutos</h3>
+        <p>Estamos a menos de 10 minutos de Calle Hoyo. Cualquier incidencia, la resolvemos nosotros antes de que se convierta en un problema.</p>
+      </div>
+      <div class="servicio-card">
+        <span class="servicio-icon">🎁</span>
+        <h3>Amenities de bienvenida</h3>
+        <p>Dejamos amenities en cocina y baño en cada reserva. Un detalle que dispara las valoraciones positivas.</p>
+      </div>
+      <div class="servicio-card">
+        <span class="servicio-icon">📊</span>
+        <h3>Informe mensual</h3>
+        <p>Cobras directamente de Airbnb y Booking. Nosotros te enviamos un informe mensual y te facturamos nuestra comisión.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA CALLE -->
+  <section class="section-cta-calle">
+    <div class="cta-calle-left">
+      <div class="section-label">¿Tienes un apartamento aquí?</div>
+      <h2>Tu apartamento en <em>Calle Hoyo</em> puede rendir mucho más</h2>
+      <p>
+        Primera consulta gratuita y sin compromiso. Te decimos exactamente cuánto
+        puede ganar tu apartamento y cómo lo gestionaríamos desde el primer día.
+        Sin letra pequeña, sin cuotas fijas: solo cobramos cuando tú cobras.
+      </p>
+    </div>
+
+    <div class="cta-calle-right">
+      <div class="cta-calle-title">Contacta ahora — es gratis</div>
+      <a
+        href="https://wa.me/34603658260?text=Hola,%20me%20interesa%20información%20sobre%20gestión%20de%20mi%20apartamento%20en%20Calle Hoyo,%20Torremolinos"
+        target="_blank"
+        class="cta-wa-btn"
+      >
+        💬 Escribir por WhatsApp
+      </div>
+      <a href="tel:+34603658260" class="cta-tel-btn">
+        📞 Llamar: +34 603 658 260
+      </div>
+      <div class="cta-calle-details">
+        <div class="cta-detail">✓ Primera consulta gratuita</div>
+        <div class="cta-detail">✓ Sin permanencias ni cuotas fijas</div>
+        <div class="cta-detail">✓ Respuesta en menos de 24 horas</div>
+        <div class="cta-detail">✓ 36 años de experiencia en turismo</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALLES RELACIONADAS -->
+  <section class="section-related">
+    <div class="section-label">Otras calles cercanas</div>
+    <h2 class="section-title" style="margin-bottom:1rem;font-size:1.5rem;">También gestionamos apartamentos en</h2>
+    <p style="font-size:0.9rem;color:var(--text-muted);margin-bottom:2rem;font-weight:300;">
+      Cubrimos las 150 calles más turísticas de Torremolinos.
+    </p>
+
+    <!--
+      INSTRUCCIÓN: Sustituye estas tarjetas por las calles más cercanas
+      a Calle Hoyo geográficamente.
+    -->
+    <div class="related-grid">
+      <div class="related-card">
+        <span class="related-dot"></span>
+        <span>Calle San Miguel</span>
+      </div>
+      <div class="related-card">
+        <span class="related-dot"></span>
+        <span>Calle Campillos</span>
+      </div>
+      <div class="related-card">
+        <span class="related-dot"></span>
+        <span>Calle Cauce</span>
+      </div>
+      <div class="related-card">
+        <span class="related-dot"></span>
+        <span>Avenida del Lido</span>
+      </div>
+    </div>
+
+    <div class="related-more">
+      Ver las 150 calles →
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-logo">Torremolinos <span>Gestión Vacacional</span></div>
+      <ul class="footer-links">
+        <li>Inicio</li>
+        <li>Servicios</li>
+        <li>Sobre mí</li>
+        <li>Las 150 calles</li>
+        <li><a href="https://wa.me/34603658260" target="_blank">WhatsApp</div></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <div style="display:flex;justify-content:center;gap:2.5rem;flex-wrap:wrap;margin-bottom:0.75rem;">
+        <span>📞 <a href="tel:+34603658260" style="color:rgba(255,255,255,0.4);text-decoration:none;">+34 603 658 260</div></span>
+        <span>✉️ info&#64;gestion-apartamentos-turisticos-torremolinos.com</span>
+        <span>📍 C. Campillos, 10, Torremolinos, Málaga</span>
+      </div>
+      © 2026 Torremolinos Gestión 

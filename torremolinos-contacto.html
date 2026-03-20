@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Torremolinos Gestión Vacacional</title>
+  <meta name="description" content="Contacta con Torremolinos Gestión Vacacional. Primera consulta gratuita y sin compromiso. Teléfono, WhatsApp y email disponibles. C. Campillos, 10, Torremolinos.">
+  <meta name="keywords" content="contacto gestor apartamentos Torremolinos, gestión vacacional Torremolinos, alquiler turístico Torremolinos contacto">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --sand: #E8DDD0;
+      --sand-light: #F5F0EA;
+      --ocean: #1A4A6B;
+      --ocean-deep: #0D2E45;
+      --turquoise: #3AAFA9;
+      --gold: #C9963A;
+      --white: #FDFAF6;
+      --text: #1C1C1C;
+      --text-muted: #6B6560;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--white);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: relative;
+      padding: 1.2rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(253,250,246,0.98);
+      border-bottom: 1px solid rgba(201,150,58,0.15);
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--ocean-deep);
+      text-decoration: none;
+    }
+    .nav-logo span { color: var(--gold); }
+
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; flex-wrap: wrap; }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--ocean); }
+    .nav-links a.active { color: var(--ocean); border-bottom: 2px solid var(--gold); padding-bottom: 2px; }
+
+    .nav-cta { background: var(--ocean) !important; color: var(--white) !important; padding: 0.65rem 1.5rem; }
+    .nav-cta:hover { background: var(--gold) !important; }
+
+    /* ── LABELS ── */
+    .section-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .section-label::before { content: ''; display: block; width: 2rem; height: 1px; background: var(--gold); }
+
+    /* ── HERO ── */
+    .hero-contact {
+      padding: 5rem 8rem 6rem;
+      background: var(--ocean-deep);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-contact::before {
+      content: 'HOLA';
+      position: absolute;
+      right: -1rem; top: 50%;
+      transform: translateY(-50%);
+      font-family: 'Playfair Display', serif;
+      font-size: 14rem;
+      font-weight: 900;
+      color: rgba(255,255,255,0.02);
+      pointer-events: none;
+      line-height: 1;
+    }
+
+    .hero-contact .section-label { color: var(--gold); }
+    .hero-contact .section-label::before { background: var(--gold); }
+
+    .hero-contact h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 4vw, 4rem);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      max-width: 650px;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-contact h1 em { font-style: italic; color: var(--turquoise); }
+
+    .hero-contact p {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.6);
+      font-weight: 300;
+      max-width: 520px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ── CANALES DE CONTACTO ── */
+    .section-channels {
+      padding: 5rem 8rem;
+      background: var(--sand-light);
+    }
+
+    .channels-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      background: var(--sand);
+    }
+
+    .channel-card {
+      background: var(--white);
+      padding: 3rem 2.5rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      transition: background 0.3s;
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+    }
+    .channel-card:hover { background: var(--sand-light); }
+
+    .channel-card::before {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--turquoise);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+    }
+    .channel-card:hover::before { transform: scaleX(1); }
+
+    .channel-icon { font-size: 2.5rem; }
+
+    .channel-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--ocean-deep);
+    }
+
+    .channel-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      font-weight: 300;
+    }
+
+    .channel-value {
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--ocean);
+      word-break: break-all;
+    }
+
+    .channel-btn {
+      margin-top: 0.5rem;
+      background: var(--gold);
+      color: var(--white);
+      padding: 0.7rem 1.5rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.25s;
+    }
+    .channel-btn:hover { background: var(--turquoise); }
+
+    /* ── FORMULARIO + MAPA ── */
+    .section-form-map {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-form-wrap {
+      background: var(--ocean-deep);
+      padding: 6rem 5rem;
+    }
+
+    .form-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+
+    .form-subtitle {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 3rem;
+      font-weight: 300;
+    }
+
+    .form-group { margin-bottom: 1.2rem; }
+
+    .form-group label {
+      display: block;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 0.5rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      color: var(--white);
+      padding: 0.85rem 1rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--gold);
+      background: rgba(201,150,58,0.05);
+    }
+    .form-group textarea { resize: vertical; min-height: 110px; }
+    .form-group select option { background: var(--ocean-deep); }
+    ::placeholder { color: rgba(255,255,255,0.2); }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+    .btn-submit {
+      width: 100%;
+      background: var(--gold);
+      color: var(--white);
+      border: none;
+      padding: 1.1rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.25s;
+      margin-top: 0.5rem;
+    }
+    .btn-submit:hover { background: var(--turquoise); }
+
+    /* Mapa + datos */
+    .contact-map-wrap {
+      background: var(--sand);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .map-embed {
+      flex: 1;
+      min-height: 300px;
+    }
+
+    .map-embed iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 300px;
+      border: none;
+      display: block;
+    }
+
+    .map-details {
+      padding: 3rem 4rem;
+      background: var(--white);
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .map-detail-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .map-detail-icon {
+      width: 2.2rem; height: 2.2rem;
+      background: var(--sand-light);
+      border: 1px solid rgba(201,150,58,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+
+    .map-detail-text strong {
+      display: block;
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      font-weight: 500;
+      margin-bottom: 0.15rem;
+    }
+
+    .map-detail-text span {
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+
+    /* ── PREGUNTAS FRECUENTES ── */
+    .section-faq {
+      padding: 7rem 8rem;
+      background: var(--white);
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      font-weight: 700;
+      color: var(--ocean-deep);
+      line-height: 1.15;
+      max-width: 600px;
+      margin-bottom: 4rem;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      background: var(--sand);
+    }
+
+    .faq-item {
+      background: var(--white);
+      padding: 2.5rem 3rem;
+      transition: background 0.3s;
+    }
+    .faq-item:hover { background: var(--sand-light); }
+
+    .faq-item h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--ocean-deep);
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    .faq-item h4::before {
+      content: 'P';
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.6rem;
+      height: 1.6rem;
+      background: var(--gold);
+      color: var(--white);
+      font-size: 0.7rem;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    .faq-item p { font-size: 0.9rem; line-height: 1.7; color: var(--text-muted); font-weight: 300; padding-left: 2.35rem; }
+
+    /* ── RESEÑAS ── */
+    .section-reviews {
+      padding: 7rem 8rem;
+      background: var(--sand-light);
+      text-align: center;
+    }
+    .section-reviews .section-label { justify-content: center; }
+    .section-reviews .section-label::before { display: none; }
+    .section-reviews .section-title { margin: 0 auto 1rem; text-align: center; }
+
+    .reviews-intro {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--text-muted);
+      max-width: 500px;
+      margin: 0 auto 3rem;
+      font-weight: 300;
+    }
+
+    .reviews-cta-wrap { display: flex; flex-direction: column; align-items: center; gap: 1.5rem; }
+
+    .btn-google {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: var(--white);
+      color: var(--text);
+      border: 1px solid rgba(0,0,0,0.12);
+      padding: 1rem 2rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 500;
+      text-decoration: none;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      transition: all 0.25s;
+    }
+    .btn-google:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.15); transform: translateY(-2px); }
+    .btn-google-arrow { color: var(--gold); font-size: 1.1rem; }
+
+    .reviews-stars { display: flex; align-items: center; gap: 0.75rem; }
+    .stars { color: #FBBC05; font-size: 1.4rem; letter-spacing: 0.05em; }
+    .stars-label { font-size: 0.8rem; color: var(--text-muted); letter-spacing: 0.05em; text-transform: uppercase; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #0A1F30;
+      color: rgba(255,255,255,0.45);
+      padding: 2.5rem 4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      font-size: 0.8rem;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--white); }
+    .footer-logo span { color: var(--gold); }
+
+    .footer-links { display: flex; gap: 1.5rem; list-style: none; flex-wrap: wrap; }
+    .footer-links a { color: rgba(255,255,255,0.4); text-decoration: none; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--gold); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding-top: 1.2rem;
+      text-align: center;
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.2);
+    }
+
+    /* ── ANIMACIONES ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .hero-contact .section-label { animation: fadeUp 0.7s ease both 0.1s; }
+    .hero-contact h1 { animation: fadeUp 0.7s ease both 0.25s; }
+    .hero-contact p  { animation: fadeUp 0.7s ease both 0.4s; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1100px) {
+      nav { padding: 1.2rem 2rem; }
+      .nav-links { display: none; }
+      .hero-contact { padding: 4rem 3rem 5rem; }
+      .hero-contact::before { display: none; }
+      .section-channels { padding: 5rem 3rem; }
+      .channels-grid { grid-template-columns: 1fr; }
+      .section-form-map { grid-template-columns: 1fr; }
+      .contact-form-wrap { padding: 5rem 3rem; }
+      .map-details { padding: 2.5rem 3rem; }
+      .section-faq { padding: 5rem 3rem; }
+      .faq-grid { grid-template-columns: 1fr; }
+      .section-reviews { padding: 5rem 3rem; }
+    }
+
+    @media (max-width: 600px) {
+      body { overflow-x: hidden; }
+      nav { padding: 1rem 1.5rem; }
+      .nav-logo { font-size: 1rem; }
+      .hero-contact { padding: 3rem 1.5rem 4rem; }
+      .section-channels, .section-faq, .section-reviews { padding: 4rem 1.5rem; }
+      .contact-form-wrap { padding: 3rem 1.5rem; }
+      .map-details { padding: 2rem 1.5rem; }
+      .form-row { grid-template-columns: 1fr; }
+      .section-title { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+
+  <!-- HERO -->
+  <section class="hero-contact">
+    <div class="section-label">Estamos aquí</div>
+    <h1>Cuéntanos qué<br>necesitas, <em>te respondemos<br>hoy mismo</em></h1>
+    <p>
+      Primera consulta gratuita y sin compromiso. Si tienes un apartamento en Torremolinos
+      y quieres saber cuánto puede rendir, escríbenos ahora y te lo decimos hoy.
+    </p>
+  </section>
+
+  <!-- CANALES DE CONTACTO -->
+  <section class="section-channels">
+    <div class="channels-grid">
+
+      <a href="https://wa.me/34603658260?text=Hola,%20me%20interesa%20información%20sobre%20gestión%20de%20mi%20apartamento%20en%20Torremolinos" target="_blank" class="channel-card">
+        <span class="channel-icon">💬</span>
+        <h3>WhatsApp</h3>
+        <p>La forma más rápida de contactarnos. Respuesta inmediata en horario de atención.</p>
+        <span class="channel-value">+34 603 658 260</span>
+        <span class="channel-btn">Abrir WhatsApp</span>
+      </a>
+
+      <a href="tel:+34603658260" class="channel-card">
+        <span class="channel-icon">📞</span>
+        <h3>Teléfono</h3>
+        <p>Llámanos directamente si prefieres hablar. Atención personal y cercana.</p>
+        <span class="channel-value">+34 603 658 260</span>
+        <span class="channel-btn">Llamar ahora</span>
+      </a>
+
+      <a href="/cdn-cgi/l/email-protection#bbd2d5ddd4fbdcdec8cfd2d4d596dacbdac9cfdad6ded5cfd4c896cfcec9d2c8cfd2d8d4c896cfd4c9c9ded6d4d7d2d5d4c895d8d4d6" class="channel-card">
+        <span class="channel-icon">✉️</span>
+        <h3>Email</h3>
+        <p>Para consultas más detalladas. Respondemos en menos de 24 horas.</p>
+        <span class="channel-value">info&#64;gestion-apartamentos-turisticos-torremolinos.com</span>
+        <span class="channel-btn">Enviar email</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- FORMULARIO + MAPA -->
+  <section class="section-form-map">
+
+    <div class="contact-form-wrap">
+      <div class="form-title">Consulta gratuita</div>
+      <div class="form-subtitle">Rellena el formulario y te respondemos hoy</div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Nombre</label>
+          <input type="text" id="f-nombre" placeholder="Tu nombre">
+        </div>
+        <div class="form-group">
+          <label>Teléfono</label>
+          <input type="tel" id="f-telefono" placeholder="+34 600...">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" id="f-email" placeholder="tu@email.com">
+      </div>
+
+      <div class="form-group">
+        <label>Dirección del apartamento en Torremolinos</label>
+        <input type="text" id="f-direccion" placeholder="Calle y número">
+      </div>
+
+      <div class="form-group">
+        <label>¿Está gestionado actualmente?</label>
+        <select id="f-gestion">
+          <option value="">Selecciona una opción</option>
+          <option>No, lo gestiono yo mismo</option>
+          <option>Sí, con otra empresa</option>
+          <option>Está vacío / sin uso</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>¿Cuántas habitaciones tiene?</label>
+        <select id="f-hab">
+          <option value="">Selecciona una opción</option>
+          <option>Estudio</option>
+          <option>1 habitación</option>
+          <option>2 habitaciones</option>
+          <option>3 habitaciones o más</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Mensaje (opcional)</label>
+        <textarea id="f-mensaje" placeholder="Cuéntanos lo que necesites..."></textarea>
+      </div>
+
+      <button class="btn-submit" onclick="enviarWhatsApp()">
+        💬 Enviar consulta por WhatsApp →
+      </button>
+
+      <script>
+        function enviarWhatsApp() {
+          var nombre   = document.getElementById('f-nombre').value.trim();
+          var telefono = document.getElementById('f-telefono').value.trim();
+          var email    = document.getElementById('f-email').value.trim();
+          var direccion= document.getElementById('f-direccion').value.trim();
+          var gestion  = document.getElementById('f-gestion').value;
+          var hab      = document.getElementById('f-hab').value;
+          var mensaje  = document.getElementById('f-mensaje').value.trim();
+
+          if (!nombre || !telefono || !direccion) {
+            alert('Por favor rellena al menos Nombre, Teléfono y Dirección del apartamento.');
+            return;
+          }
+
+          var texto = '👋 Hola, me interesa información sobre la gestión de mi apartamento en Torremolinos.\n\n';
+          texto += '📋 *Mis datos:*\n';
+          texto += '• Nombre: ' + nombre + '\n';
+          texto += '• Teléfono: ' + telefono + '\n';
+          if (email) texto += '• Email: ' + email + '\n';
+          texto += '• Apartamento: ' + direccion + '\n';
+          if (gestion) texto += '• Gestión actual: ' + gestion + '\n';
+          if (hab) texto += '• Habitaciones: ' + hab + '\n';
+          if (mensaje) texto += '\n💬 ' + mensaje;
+
+          var url = 'https://wa.me/34603658260?text=' + encodeURIComponent(texto);
+          window.open(url, '_blank');
+        }
+      </script>
+    </div>
+
+    <div class="contact-map-wrap">
+      <div class="map-embed">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3200.5!2d-4.4996!3d36.6213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72f7a0000000001%3A0x1!2sC.%20Campillos%2C%2010%2C%20Torremolinos%2C%20M%C3%A1laga!5e0!3m2!1ses!2ses!4v1"
+          width="100%" height="100%"
+          style="border:0; min-height:300px;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      <div class="map-details">
+        <div class="map-detail-row">
+          <div class="map-detail-icon">📍</div>
+          <div class="map-detail-text">
+            <strong>Dirección</strong>
+            <span>C. Campillos, 10, Torremolinos, Málaga</span>
+          </div>
+        </div>
+        <div class="map-detail-row">
+          <div class="map-detail-icon">📱</div>
+          <div class="map-detail-text">
+            <strong>WhatsApp / Teléfono</strong>
+            <span>+34 603 658 260</span>
+          </div>
+        </div>
+        <div class="map-detail-row">
+          <div class="map-detail-icon">✉️</div>
+          <div class="map-detail-text">
+            <strong>Email</strong>
+            <span>info&#64;gestion-apartamentos-turisticos-torremolinos.com</span>
+          </div>
+        </div>
+        <div class="map-detail-row">
+          <div class="map-detail-icon">🕐</div>
+          <div class="map-detail-text">
+            <strong>Tiempo de respuesta</strong>
+            <span>Menos de 24 horas · WhatsApp inmediato</span>
+          </div>
+        </div>
+        <div class="map-detail-row">
+          <div class="map-detail-icon">📍</div>
+          <div class="map-detail-text">
+            <strong>Cobertura</strong>
+            <span>Todas las calles de Torremolinos · &lt;10 min de respuesta presencial</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- PREGUNTAS FRECUENTES -->
+  <section class="section-faq">
+    <div class="section-label">Dudas frecuentes</div>
+    <h2 class="section-title">Preguntas que nos suelen hacer</h2>
+
+    <div class="faq-grid">
+
+      <div class="faq-item">
+        <h4>¿Cuánto cobráis de comisión?</h4>
+        <p>Nuestra comisión va del 15% al 20% sobre los ingresos generados, según el plan elegido. Solo cobramos cuando tú cobras — sin cuotas fijas ni permanencias. Tú recibes el pago directamente de Airbnb o Booking y nosotros te facturamos mensualmente.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>¿Puedo usar mi apartamento cuando quiera?</h4>
+        <p>Por supuesto. Si quieres venir tú, un familiar o alguien de tu confianza, bloqueamos el apartamento para vosotros sin problema. Nos adaptamos completamente a tus necesidades como propietario.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>¿Necesito licencia turística?</h4>
+        <p>Sí, en Andalucía es obligatorio tener la Vivienda con Fines Turísticos (VFT) para alquilar legalmente. Te asesoramos en todo el proceso de obtención y nos encargamos del registro de viajeros en la Guardia Civil.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>¿Cómo funciona la limpieza entre estancias?</h4>
+        <p>Contamos con lavandería propia y equipo de limpieza profesional. Después de cada salida limpiamos el apartamento, cambiamos la ropa de cama y toallas, y dejamos los amenities preparados para la siguiente entrada.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>¿Qué pasa si hay una avería o problema?</h4>
+        <p>Estamos a menos de 10 minutos de cualquier punto de Torremolinos. Si surge un problema, acudimos nosotros mismos, lo resolvemos y después te pasamos la factura. La satisfacción del huésped no puede esperar.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>¿En qué plataformas publican el apartamento?</h4>
+        <p>Publicamos en Airbnb, Booking.com, Vrbo y otros canales según el potencial del apartamento. Gestionamos todos los anuncios, mensajes, valoraciones y precios de forma activa para maximizar la ocupación.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- RESEÑAS -->
+  <section class="section-reviews">
+    <div class="section-label">Lo que dicen</div>
+    <h2 class="section-title">Opiniones reales en Google</h2>
+    <p class="reviews-intro">
+      Lee las valoraciones de propietarios y viajeros directamente en nuestro perfil de Google Business.
+    </p>
+    <div class="reviews-cta-wrap">
+      <a href="https://share.google/XGr9yXy6RG7KVQ2ts" target="_blank" rel="noopener noreferrer" class="btn-google">
+        <svg width="20" height="20" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+          <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+          <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+          <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+        </svg>
+        Ver todas las reseñas en Google
+        <span class="btn-google-arrow">→</span>
+      </a>
+      <div class="reviews-stars">
+        <span class="stars">★★★★★</span>
+        <span class="stars-label">Valoración en Google Business</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-logo">Torremolinos <span>Gestión Vacacional</span></div>
+      <ul class="footer-links">
+        <li>Inicio</li>
+        <li>Servicios</li>
+        <li>Sobre mí</li>
+        <li>Las 150 calles</li>
+        <li><a href="https://wa.me/34603658260" target="_blank">WhatsApp</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      © 2026 Torremolinos Gestión Vacacional · C. C

@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios de Gestión de Apartamentos Turísticos en Torremolinos | Torremolinos Gestión Vacacional</title>
+  <meta name="description" content="Servicios completos de gestión de apartamentos turísticos en Torremolinos: publicación en Airbnb y Booking, check-in, limpieza, mantenimiento y más. Sin preocupaciones.">
+  <meta name="keywords" content="servicios gestión apartamentos Torremolinos, alquiler vacacional Torremolinos, gestión Airbnb Torremolinos, gestor apartamentos turísticos Málaga">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --sand: #E8DDD0;
+      --sand-light: #F5F0EA;
+      --ocean: #1A4A6B;
+      --ocean-deep: #0D2E45;
+      --turquoise: #3AAFA9;
+      --gold: #C9963A;
+      --white: #FDFAF6;
+      --text: #1C1C1C;
+      --text-muted: #6B6560;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--white);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: relative;
+      padding: 1.2rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(253,250,246,0.98);
+      border-bottom: 1px solid rgba(201,150,58,0.15);
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--ocean-deep);
+      text-decoration: none;
+    }
+    .nav-logo span { color: var(--gold); }
+
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; flex-wrap: wrap; }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--ocean); }
+    .nav-links a.active { color: var(--ocean); border-bottom: 2px solid var(--gold); padding-bottom: 2px; }
+
+    .nav-cta { background: var(--ocean) !important; color: var(--white) !important; padding: 0.65rem 1.5rem; }
+    .nav-cta:hover { background: var(--gold) !important; }
+
+    /* ── SECTION LABELS & TÍTULOS ── */
+    .section-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .section-label::before { content: ''; display: block; width: 2rem; height: 1px; background: var(--gold); }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      font-weight: 700;
+      color: var(--ocean-deep);
+      line-height: 1.15;
+      max-width: 650px;
+      margin-bottom: 1rem;
+    }
+
+    .section-intro {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: var(--text-muted);
+      max-width: 580px;
+      font-weight: 300;
+      margin-bottom: 4rem;
+    }
+
+    /* ── HERO SERVICIOS ── */
+    .hero-services {
+      padding: 5rem 8rem 6rem;
+      background: var(--ocean-deep);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-services::before {
+      content: 'SERVICIOS';
+      position: absolute;
+      right: -1rem; top: 50%;
+      transform: translateY(-50%);
+      font-family: 'Playfair Display', serif;
+      font-size: 11rem;
+      font-weight: 900;
+      color: rgba(255,255,255,0.03);
+      pointer-events: none;
+      line-height: 1;
+    }
+
+    .hero-services .section-label { color: var(--gold); }
+    .hero-services .section-label::before { background: var(--gold); }
+
+    .hero-services h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 4vw, 4rem);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      max-width: 700px;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-services h1 em { font-style: italic; color: var(--turquoise); }
+
+    .hero-services p {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.6);
+      font-weight: 300;
+      max-width: 560px;
+      margin-bottom: 2.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .pill {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.75);
+      padding: 0.45rem 1rem;
+      font-size: 0.8rem;
+      letter-spacing: 0.03em;
+    }
+
+    /* ── SERVICIOS GRID ── */
+    .section-main { padding: 7rem 8rem; background: var(--white); }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      background: var(--sand);
+    }
+
+    .service-card {
+      background: var(--white);
+      padding: 3rem 2.5rem;
+      position: relative;
+      overflow: hidden;
+      transition: background 0.3s;
+    }
+    .service-card:hover { background: var(--sand-light); }
+
+    .service-card::after {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 3px;
+      background: var(--turquoise);
+      transform: scaleY(0);
+      transform-origin: bottom;
+      transition: transform 0.4s ease;
+    }
+    .service-card:hover::after { transform: scaleY(1); }
+
+    .service-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      font-weight: 900;
+      color: rgba(201,150,58,0.12);
+      line-height: 1;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .service-icon { font-size: 2rem; margin-bottom: 1.2rem; display: block; }
+
+    .service-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--ocean-deep);
+      margin-bottom: 0.75rem;
+    }
+
+    .service-card p { font-size: 0.9rem; line-height: 1.7; color: var(--text-muted); font-weight: 300; }
+
+    .service-list {
+      margin-top: 1rem;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .service-list li {
+      font-size: 0.83rem;
+      color: var(--text-muted);
+      padding-left: 1rem;
+      position: relative;
+    }
+    .service-list li::before { content: '→'; position: absolute; left: 0; color: var(--turquoise); font-size: 0.75rem; }
+
+    /* ── QUÉ INCLUYE ── */
+    .section-included { padding: 7rem 8rem; background: var(--sand-light); }
+
+    .included-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: center;
+      margin-top: 4rem;
+    }
+
+    .included-list { display: flex; flex-direction: column; gap: 1.5rem; }
+
+    .included-item { display: flex; gap: 1.2rem; align-items: flex-start; }
+
+    .included-check {
+      width: 2.2rem; height: 2.2rem;
+      background: var(--ocean-deep);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+
+    .included-item h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--ocean-deep);
+      margin-bottom: 0.3rem;
+    }
+    .included-item p { font-size: 0.87rem; line-height: 1.6; color: var(--text-muted); font-weight: 300; }
+
+    /* Stats box */
+    .stats-box {
+      background: var(--ocean-deep);
+      padding: 3.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .stats-box::before {
+      content: '';
+      position: absolute;
+      top: -2rem; right: -2rem;
+      width: 10rem; height: 10rem;
+      border-radius: 50%;
+      background: rgba(58,175,169,0.08);
+    }
+
+    .stats-box-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+    .stats-box-sub { font-size: 0.82rem; color: rgba(255,255,255,0.4); margin-bottom: 2.5rem; font-weight: 300; }
+
+    .stats-items { display: flex; flex-direction: column; gap: 2rem; }
+
+    .stat-row { border-bottom: 1px solid rgba(255,255,255,0.07); padding-bottom: 2rem; }
+    .stat-row:last-child { border-bottom: none; padding-bottom: 0; }
+
+    .stat-big {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      font-weight: 900;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .stat-desc { font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-top: 0.3rem; letter-spacing: 0.05em; text-transform: uppercase; }
+
+    /* ── COMISIÓN ── */
+    .section-pricing { padding: 7rem 8rem; background: var(--white); }
+
+    .pricing-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      background: var(--sand);
+      margin-top: 4rem;
+    }
+
+    .pricing-card { background: var(--white); padding: 3rem 2.5rem; position: relative; }
+    .pricing-card.featured { background: var(--ocean-deep); }
+
+    .pricing-badge { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; display: block; }
+
+    .pricing-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--ocean-deep);
+      margin-bottom: 0.5rem;
+    }
+    .pricing-card.featured .pricing-name { color: var(--white); }
+
+    .pricing-price { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 900; color: var(--gold); line-height: 1; margin-bottom: 0.3rem; }
+    .pricing-price-note { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 2rem; }
+    .pricing-card.featured .pricing-price-note { color: rgba(255,255,255,0.4); }
+
+    .pricing-features { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; margin-bottom: 2rem; }
+    .pricing-features li { font-size: 0.87rem; color: var(--text-muted); display: flex; align-items: flex-start; gap: 0.6rem; }
+    .pricing-card.featured .pricing-features li { color: rgba(255,255,255,0.65); }
+    .pricing-features li::before { content: '✓'; color: var(--turquoise); font-weight: 700; flex-shrink: 0; }
+
+    /* ── BOTONES ── */
+    .btn-primary {
+      background: var(--gold);
+      color: var(--white);
+      padding: 0.9rem 2rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.25s;
+      width: 100%;
+      text-align: center;
+    }
+    .btn-primary:hover { background: var(--turquoise); }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--ocean);
+      padding: 0.9rem 2rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border: 1px solid var(--ocean);
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.25s;
+      width: 100%;
+      text-align: center;
+    }
+    .btn-outline:hover { background: var(--ocean); color: var(--white); }
+
+    /* ── ZONAS ── */
+    .section-zones {
+      padding: 7rem 8rem;
+      background: var(--ocean-deep);
+      position: relative;
+      overflow: hidden;
+    }
+    .section-zones .section-label { color: var(--gold); }
+    .section-zones .section-label::before { background: var(--gold); }
+    .section-zones .section-title { color: var(--white); }
+    .section-zones .section-intro { color: rgba(255,255,255,0.5); }
+
+    .zones-strip { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 3rem; }
+
+    .zone-tag {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: rgba(255,255,255,0.65);
+      padding: 0.45rem 1rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.05em;
+      transition: all 0.2s;
+    }
+    .zone-tag:hover { background: rgba(58,175,169,0.15); border-color: var(--turquoise); color: var(--white); }
+
+    /* ── RESEÑAS ── */
+    .section-reviews {
+      padding: 7rem 8rem;
+      background: var(--white);
+      text-align: center;
+    }
+    .section-reviews .section-label { justify-content: center; }
+    .section-reviews .section-label::before { display: none; }
+    .section-reviews .section-title { margin: 0 auto 1rem; text-align: center; }
+
+    .reviews-intro {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--text-muted);
+      max-width: 500px;
+      margin: 0 auto 3rem;
+      font-weight: 300;
+    }
+
+    .reviews-cta-wrap { display: flex; flex-direction: column; align-items: center; gap: 1.5rem; }
+
+    .btn-google {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: var(--white);
+      color: var(--text);
+      border: 1px solid rgba(0,0,0,0.12);
+      padding: 1rem 2rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 500;
+      text-decoration: none;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      transition: all 0.25s;
+    }
+    .btn-google:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.15); transform: translateY(-2px); }
+    .btn-google-arrow { color: var(--gold); font-size: 1.1rem; }
+
+    .reviews-stars { display: flex; align-items: center; gap: 0.75rem; }
+    .stars { color: #FBBC05; font-size: 1.4rem; letter-spacing: 0.05em; }
+    .stars-label { font-size: 0.8rem; color: var(--text-muted); letter-spacing: 0.05em; text-transform: uppercase; }
+
+    /* ── CTA FINAL ── */
+    .section-cta {
+      padding: 7rem 8rem;
+      background: var(--sand-light);
+      text-align: center;
+    }
+
+    .cta-inner { max-width: 600px; margin: 0 auto; }
+    .cta-inner .section-label { justify-content: center; }
+    .cta-inner .section-label::before { display: none; }
+
+    .cta-inner h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 3vw, 3rem);
+      font-weight: 900;
+      color: var(--ocean-deep);
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+    }
+
+    .cta-inner p { font-size: 1rem; line-height: 1.75; color: var(--text-muted); margin-bottom: 2.5rem; font-weight: 300; }
+
+    .cta-btn {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--white);
+      padding: 1rem 2.5rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: all 0.25s;
+    }
+    .cta-btn:hover { background: var(--turquoise); transform: translateY(-2px); }
+
+    .cta-contact {
+      margin-top: 2.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+    .cta-contact-item { display: flex; align-items: center; gap: 0.6rem; font-size: 0.9rem; color: var(--text-muted); }
+    .cta-contact-item strong { color: var(--ocean-deep); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #0A1F30;
+      color: rgba(255,255,255,0.45);
+      padding: 2.5rem 4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      font-size: 0.8rem;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--white); }
+    .footer-logo span { color: var(--gold); }
+
+    .footer-links { display: flex; gap: 1.5rem; list-style: none; flex-wrap: wrap; }
+    .footer-links a { color: rgba(255,255,255,0.4); text-decoration: none; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--gold); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding-top: 1.2rem;
+      text-align: center;
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.2);
+    }
+
+    /* ── ANIMACIONES ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .hero-services .section-label { animation: fadeUp 0.7s ease both 0.1s; }
+    .hero-services h1  { animation: fadeUp 0.7s ease both 0.25s; }
+    .hero-services p   { animation: fadeUp 0.7s ease both 0.4s; }
+    .hero-pills        { animation: fadeUp 0.7s ease both 0.55s; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1100px) {
+      nav { padding: 1.2rem 2rem; }
+      .nav-links { display: none; }
+      .hero-services { padding: 4rem 3rem 5rem; }
+      .section-main, .section-included, .section-pricing,
+      .section-zones, .section-reviews, .section-cta { padding: 5rem 3rem; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .included-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .pricing-cards { grid-template-columns: 1fr; }
+      .cta-contact { gap: 1.5rem; }
+    }
+
+    @media (max-width: 600px) {
+      body { overflow-x: hidden; }
+      nav { padding: 1rem 1.5rem; }
+      .nav-logo { font-size: 1rem; }
+      .hero-services { padding: 3rem 1.5rem 4rem; }
+      .hero-services::before { display: none; }
+      .section-main, .section-included, .section-pricing,
+      .section-zones, .section-reviews, .section-cta { padding: 4rem 1.5rem; }
+      .services-grid { grid-template-columns: 1fr; }
+      .section-title { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+
+  <!-- HERO -->
+  <section class="hero-services">
+    <div class="section-label">Lo que ofrezco</div>
+    <h1>Gestión <em>integral</em> de tu<br>apartamento en Torremolinos</h1>
+    <p>
+      Me encargo de absolutamente todo para que tu apartamento turístico genere
+      el máximo rendimiento sin que tengas que mover un dedo. Desde la publicación
+      en plataformas hasta el cobro directo en tu cuenta.
+    </p>
+    <div class="hero-pills">
+      <span class="pill">📋 Publicación en plataformas</span>
+      <span class="pill">🔑 Check-in & check-out</span>
+      <span class="pill">🧹 Limpieza profesional</span>
+      <span class="pill">🛠️ Mantenimiento</span>
+      <span class="pill">💬 Atención al viajero 24/7</span>
+      <span class="pill">📊 Informe mensual</span>
+    </div>
+  </section>
+
+  <!-- SERVICIOS DETALLE -->
+  <section class="section-main">
+    <div class="section-label">Servicios completos</div>
+    <h2 class="section-title">Todo lo que incluye la gestión</h2>
+    <p class="section-intro">
+      Un único gestor que conoce Torremolinos calle a calle y se ocupa de cada detalle
+      para que tu inversión rinda al máximo.
+    </p>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <span class="service-num">01</span>
+        <span class="service-icon">📣</span>
+        <h3>Publicación y gestión de anuncios</h3>
+        <p>Creo y optimizo tu anuncio en todas las plataformas principales con fotos profesionales, textos atractivos y precios dinámicos según la temporada.</p>
+        <ul class="service-list">
+          <li>Airbnb, Booking.com, Vrbo</li>
+          <li>Fotografía profesional del apartamento</li>
+          <li>Precios dinámicos por temporada</li>
+          <li>Respuesta a valoraciones</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <span class="service-num">02</span>
+        <span class="service-icon">🔑</span>
+        <h3>Check-in y check-out presencial</h3>
+        <p>Recibo personalmente a cada viajero en el apartamento, entrego las llaves, explico el funcionamiento y me aseguro de que todo esté perfecto al llegar.</p>
+        <ul class="service-list">
+          <li>Recepción presencial siempre</li>
+          <li>Gestión de llaves y accesos</li>
+          <li>Inspección al check-out</li>
+          <li>Inventario de daños si los hubiera</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <span class="service-num">03</span>
+        <span class="service-icon">🧹</span>
+        <h3>Limpieza profesional</h3>
+        <p>Equipo de limpieza profesional entre cada estancia. El apartamento siempre en perfecto estado para recibir a los siguientes huéspedes con una valoración excelente.</p>
+        <ul class="service-list">
+          <li>Limpieza completa entre estancias</li>
+          <li>Cambio de ropa de cama y toallas</li>
+          <li>Reposición de productos de bienvenida</li>
+          <li>Control de calidad post-limpieza</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <span class="service-num">04</span>
+        <span class="service-icon">💬</span>
+        <h3>Atención al viajero 24/7</h3>
+        <p>Gestiono todas las comunicaciones con los huéspedes antes, durante y después de su estancia. Respuestas rápidas que mejoran el posicionamiento en las plataformas.</p>
+        <ul class="service-list">
+          <li>Gestión de mensajes y consultas</li>
+          <li>Resolución de incidencias in situ</li>
+          <li>Atención en español e inglés</li>
+          <li>Gestión de valoraciones</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <span class="service-num">05</span>
+        <span class="service-icon">🛠️</span>
+        <h3>Mantenimiento y reparaciones</h3>
+        <p>Coordino y superviso cualquier reparación o mantenimiento necesario, siempre con tu aprobación previa y con los mejores profesionales locales.</p>
+        <ul class="service-list">
+          <li>Revisión periódica del estado</li>
+          <li>Gestión de averías urgentes</li>
+          <li>Red de proveedores de confianza</li>
+          <li>Presupuestos previos siempre</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <span class="service-num">06</span>
+        <span class="service-icon">📊</span>
+        <h3>Informes y transparencia total</h3>
+        <p>Cada mes recibes un informe detallado con todas las reservas, ingresos y ocupación. Tú cobras directamente de las plataformas y nosotros te facturamos nuestra comisión.</p>
+        <ul class="service-list">
+          <li>Informe mensual de reservas e ingresos</li>
+          <li>Estadísticas de ocupación</li>
+          <li>Cobras tú directamente de Airbnb/Booking</li>
+          <li>Factura de comisión mensual</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TODO INCLUIDO -->
+  <section class="section-included">
+    <div class="section-label">Sin sorpresas</div>
+    <h2 class="section-title">Todo incluido desde el primer día</h2>
+
+    <div class="included-grid">
+      <div class="included-list">
+
+        <div class="included-item">
+          <div class="included-check">✓</div>
+          <div>
+            <h4>Alta en plataformas y SEO del anuncio</h4>
+            <p>Creo y optimizo tu perfil en Airbnb, Booking y más. Un anuncio bien trabajado puede doblar el número de reservas.</p>
+          </div>
+        </div>
+
+        <div class="included-item">
+          <div class="included-check">✓</div>
+          <div>
+            <h4>Gestión de la licencia turística</h4>
+            <p>Te asesoro sobre los requisitos legales en Torremolinos y Málaga para operar un apartamento turístico con total legalidad.</p>
+          </div>
+        </div>
+
+        <div class="included-item">
+          <div class="included-check">✓</div>
+          <div>
+            <h4>Estrategia de precios dinámica</h4>
+            <p>Ajusto los precios según la temporada, eventos locales y la competencia para maximizar tu ocupación e ingresos.</p>
+          </div>
+        </div>
+
+        <div class="included-item">
+          <div class="included-check">✓</div>
+          <div>
+            <h4>Registro de viajeros en Guardia Civil</h4>
+            <p>Me encargo de todas las obligaciones legales: registro de huéspedes y comunicación con las autoridades pertinentes.</p>
+          </div>
+        </div>
+
+        <div class="included-item">
+          <div class="included-check">✓</div>
+          <div>
+            <h4>Cobertura en las 150 calles de Torremolinos</h4>
+            <p>Conozco cada rincón del municipio. Da igual en qué calle esté tu apartamento — estoy cerca y disponible siempre.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="stats-box">
+        <div class="stats-box-title">¿Cuánto puedes ganar?</div>
+        <div class="stats-box-sub">Estimación media en Torremolinos</div>
+        <div class="stats-items">
+          <div class="stat-row">
+            <div class="stat-big">92%</div>
+            <div class="stat-desc">Ocupación media anual posible</div>
+          </div>
+          <div class="stat-row">
+            <div class="stat-big">+30%</div>
+            <div class="stat-desc">Más ingresos vs. gestión propia</div>
+          </div>
+          <div class="stat-row">
+            <div class="stat-big">0h</div>
+            <div class="stat-desc">Tiempo que dedicas tú al mes</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMISIÓN -->
+  <section class="section-pricing">
+    <div class="section-label">Tarifas</div>
+    <h2 class="section-title">Comisión clara, sin letra pequeña</h2>
+    <p class="section-intro">
+      Solo cobro cuando tú cobras. Sin cuotas fijas, sin permanencias, sin sorpresas.
+      Tú recibes el pago directamente de Airbnb o Booking, y nosotros te facturamos nuestra comisión mensual.
+    </p>
+
+    <div class="pricing-cards">
+
+      <div class="pricing-card">
+        <span class="pricing-badge">Gestión básica</span>
+        <div class="pricing-name">Esencial</div>
+        <div class="pricing-price">15<span style="font-size:1.5rem">%</span></div>
+        <div class="pricing-price-note">sobre los ingresos generados</div>
+        <ul class="pricing-features">
+          <li>Publicación en plataformas</li>
+          <li>Gestión de reservas y pagos</li>
+          <li>Check-in y check-out</li>
+          <li>Atención al viajero</li>
+          <li>Informe mensual</li>
+        </ul>
+        <a href="https://wa.me/34603658260?text=Hola,%20me%20interesa%20el%20plan%20Esencial%20de%20gestión%20de%20apartamentos%20en%20Torremolinos" target="_blank" class="btn-outline">💬 Consultar</a>
+      </div>
+
+      <div class="pricing-card featured">
+        <span class="pricing-badge">⭐ Más elegido</span>
+        <div class="pricing-name">Completo</div>
+        <div class="pricing-price">20<span style="font-size:1.5rem">%</span></div>
+        <div class="pricing-price-note" style="color:rgba(255,255,255,0.4)">sobre los ingresos generados</div>
+        <ul class="pricing-features">
+          <li>Todo lo del plan Esencial</li>
+          <li>Limpieza profesional incluida</li>
+          <li>Fotografía profesional</li>
+          <li>Estrategia de precios dinámica</li>
+          <li>Mantenimiento básico incluido</li>
+          <li>Registro de viajeros</li>
+        </ul>
+        <a href="https://wa.me/34603658260?text=Hola,%20me%20interesa%20el%20plan%20Completo%20de%20gestión%20de%20apartamentos%20en%20Torremolinos" target="_blank" class="btn-primary">💬 Empezar ahora</a>
+      </div>
+
+      <div class="pricing-card">
+        <span class="pricing-badge">Para propietarios exigentes</span>
+        <div class="pricing-name">Premium</div>
+        <div class="pricing-price" style="font-size:2rem;padding-top:0.5rem">A medida</div>
+        <div class="pricing-price-note">consultamos juntos</div>
+        <ul class="pricing-features">
+          <li>Todo lo del plan Completo</li>
+          <li>Reforma y decoración orientada</li>
+          <li>Posicionamiento SEO propio</li>
+          <li>Gestión multi-apartamento</li>
+          <li>Reporting avanzado</li>
+          <li>Atención personalizada VIP</li>
+        </ul>
+        <a href="https://wa.me/34603658260?text=Hola,%20me%20interesa%20el%20plan%20Premium%20de%20gestión%20de%20apartamentos%20en%20Torremolinos" target="_blank" class="btn-outline">💬 Contactar</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ZONAS -->
+  <section class="section-zones">
+    <div class="section-label">Cobertura total</div>
+    <h2 class="section-title">Gestiono apartamentos en toda Torremolinos</h2>
+    <p class="section-intro">
+      Desde el Paseo Marítimo hasta las calles más interiores.
+      Si tu apartamento está en Torremolinos, yo llego.
+    </p>
+    <div class="zones-strip">
+      <span class="zone-tag">La Carihuela</span>
+      <span class="zone-tag">El Bajondillo</span>
+      <span class="zone-tag">Playamar</span>
+      <span class="zone-tag">Los Álamos</span>
+      <span class="zone-tag">Centro</span>
+      <span class="zone-tag">La Nogalera</span>
+      <span class="zone-tag">Paseo Marítimo</span>
+      <span class="zone-tag">Calle San Miguel</span>
+      <span class="zone-tag">Montemar</span>
+      <span class="zone-tag">El Calvario</span>
+      <span class="zone-tag">Los Manantiales</span>
+      <span class="zone-tag">La Riviera</span>
+      <span class="zone-tag">Campillos</span>
+      <span class="zone-tag">Avenida de España</span>
+      <span class="zone-tag">Palma de Mallorca</span>
+      <span class="zone-tag">+ 135 calles más</span>
+    </div>
+    Ver las 150 calles →
+  </section>
+
+  <!-- RESEÑAS GOOGLE -->
+  <section class="section-reviews">
+    <div class="section-label">Lo que dicen</div>
+    <h2 class="section-title">Opiniones reales en Google</h2>
+    <p class="reviews-intro">
+      La confianza se construye con resultados. Lee las opiniones de propietarios y viajeros directamente en mi perfil de Google Business.
+    </p>
+    <div class="reviews-cta-wrap">
+      <a href="https://share.google/XGr9yXy6RG7KVQ2ts" target="_blank" rel="noopener noreferrer" class="btn-google">
+        <svg width="20" height="20" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+          <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+          <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+          <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+        </svg>
+        Ver todas las reseñas en Google
+        <span class="btn-google-arrow">→</span>
+      </a>
+      <div class="reviews-stars">
+        <span class="stars">★★★★★</span>
+        <span class="stars-label">Valoración en Google Business</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="section-cta">
+    <div class="cta-inner">
+      <div class="section-label">¿Hablamos?</div>
+      <h2>Primera consulta gratuita y sin compromiso</h2>
+      <p>
+        Cuéntame dónde está tu apartamento y te digo en menos de 24 horas
+        cuánto puede rendir y cómo lo gestionaría yo desde el primer día.
+      </p>
+      <a href="https://wa.me/34603658260?text=Hola,%20me%20interesa%20información%20sobre%20gestión%20de%20mi%20apartamento%20en%20Torremolinos" target="_blank" class="cta-btn">💬 Contactar por WhatsApp</a>
+      <div class="cta-contact">
+        <div class="cta-contact-item">
+          <span>📞</span>
+          <span><strong>+34 603 658 260</strong></span>
+        </div>
+        <div class="cta-contact-item">
+          <span>✉️</span>
+          <span><strong>info&#64;gestion-apartamentos-turisticos-torremolinos.com</strong></span>
+        </div>
+        <div class="cta-contact-item">
+          <span>📍</span>
+          <span>C. Campillos, 10, Torremolinos, Málaga</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-logo">Torremolinos <span>Gestión Vacacional</span></div>
+      <ul class="footer-links">
+        <li>Inicio</li>
+        <li>Servicios</li>
+        <li>Sobre mí</li>
+        <li>Las 150 calles</li>
+        <li><a href="https://wa.me/34603658260" target="_blank">WhatsApp</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <div style="display:flex;justify-content:center;gap:2.5rem;flex-wrap:wrap;margin-bottom:0.75rem;">
+        <span>📞 <a href="tel:+34603658260" style="color:rgba(255,255,255,0.4);text-decoration:none;">+34 603 658 260</a></span>
+        <span>✉️ info&#64;gestion-apartamentos-turisticos-torremolinos.com</span>
+        <span>📍 C. Campillos, 10, Torremolinos, Málaga</span>
+      </div>
+      © 2026 Torremolinos Gestión 

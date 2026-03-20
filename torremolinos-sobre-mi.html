@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Nosotros | Torremolinos Gestión Vacacional</title>
+  <meta name="description" content="36 años en turismo, 12 gestionando apartamentos turísticos en Torremolinos. 87 alojamientos activos, lavandería propia y atención en menos de 10 minutos.">
+  <meta name="keywords" content="gestor apartamentos turísticos Torremolinos, gestión vacacional Torremolinos, alquiler vacacional Torremolinos, experiencia turismo Málaga">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --sand: #E8DDD0;
+      --sand-light: #F5F0EA;
+      --ocean: #1A4A6B;
+      --ocean-deep: #0D2E45;
+      --turquoise: #3AAFA9;
+      --gold: #C9963A;
+      --white: #FDFAF6;
+      --text: #1C1C1C;
+      --text-muted: #6B6560;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--white);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: relative;
+      padding: 1.2rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(253,250,246,0.98);
+      border-bottom: 1px solid rgba(201,150,58,0.15);
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--ocean-deep);
+      text-decoration: none;
+    }
+    .nav-logo span { color: var(--gold); }
+
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; flex-wrap: wrap; }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--ocean); }
+    .nav-links a.active { color: var(--ocean); border-bottom: 2px solid var(--gold); padding-bottom: 2px; }
+
+    .nav-cta { background: var(--ocean) !important; color: var(--white) !important; padding: 0.65rem 1.5rem; }
+    .nav-cta:hover { background: var(--gold) !important; }
+
+    /* ── LABELS & TÍTULOS ── */
+    .section-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .section-label::before { content: ''; display: block; width: 2rem; height: 1px; background: var(--gold); }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      font-weight: 700;
+      color: var(--ocean-deep);
+      line-height: 1.15;
+      max-width: 650px;
+      margin-bottom: 1rem;
+    }
+
+    /* ── HERO ── */
+    .hero-about {
+      padding: 5rem 8rem 6rem;
+      background: var(--ocean-deep);
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: center;
+    }
+
+    .hero-about::before {
+      content: '36';
+      position: absolute;
+      right: -2rem; bottom: -3rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 20rem;
+      font-weight: 900;
+      color: rgba(255,255,255,0.02);
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .hero-about .section-label { color: var(--gold); }
+    .hero-about .section-label::before { background: var(--gold); }
+
+    .hero-about h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 3.5vw, 3.8rem);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-about h1 em { font-style: italic; color: var(--turquoise); }
+
+    .hero-about p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.6);
+      font-weight: 300;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Stats hero derecha */
+    .hero-stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      background: rgba(255,255,255,0.06);
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-stat-card {
+      background: rgba(255,255,255,0.03);
+      padding: 2.5rem 2rem;
+      text-align: center;
+      transition: background 0.3s;
+    }
+    .hero-stat-card:hover { background: rgba(58,175,169,0.1); }
+
+    .hero-stat-big {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      font-weight: 900;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-stat-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      line-height: 1.4;
+    }
+
+    /* ── NUESTRA HISTORIA ── */
+    .section-story {
+      padding: 7rem 8rem;
+      background: var(--white);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 7rem;
+      align-items: start;
+    }
+
+    .story-text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      font-weight: 700;
+      color: var(--ocean-deep);
+      line-height: 1.15;
+      margin-bottom: 2rem;
+    }
+    .story-text h2 em { font-style: italic; color: var(--turquoise); }
+
+    .story-text p {
+      font-size: 0.97rem;
+      line-height: 1.85;
+      color: var(--text-muted);
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Timeline */
+    .story-timeline { display: flex; flex-direction: column; gap: 0; }
+
+    .timeline-item {
+      display: flex;
+      gap: 1.5rem;
+      padding-bottom: 2.5rem;
+      position: relative;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 1.35rem;
+      top: 3rem;
+      bottom: 0;
+      width: 1px;
+      background: var(--sand);
+    }
+    .timeline-item:last-child::before { display: none; }
+
+    .timeline-dot {
+      width: 2.8rem;
+      height: 2.8rem;
+      border-radius: 50%;
+      background: var(--ocean-deep);
+      border: 2px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 0.85rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .timeline-content {}
+    .timeline-year {
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.3rem;
+    }
+    .timeline-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--ocean-deep);
+      margin-bottom: 0.4rem;
+    }
+    .timeline-desc { font-size: 0.87rem; line-height: 1.65; color: var(--text-muted); font-weight: 300; }
+
+    /* ── DIFERENCIALES ── */
+    .section-diff {
+      padding: 7rem 8rem;
+      background: var(--sand-light);
+    }
+
+    .diff-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      background: var(--sand);
+      margin-top: 4rem;
+    }
+
+    .diff-card {
+      background: var(--white);
+      padding: 3rem 2.5rem;
+      position: relative;
+      overflow: hidden;
+      transition: background 0.3s;
+    }
+    .diff-card:hover { background: var(--sand-light); }
+
+    .diff-card::before {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--turquoise);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+    }
+    .diff-card:hover::before { transform: scaleX(1); }
+
+    .diff-icon { font-size: 2.2rem; margin-bottom: 1.5rem; display: block; }
+
+    .diff-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--ocean-deep);
+      margin-bottom: 0.75rem;
+    }
+    .diff-card p { font-size: 0.9rem; line-height: 1.7; color: var(--text-muted); font-weight: 300; }
+
+    /* ── COMPROMISOS ── */
+    .section-commitments {
+      padding: 7rem 8rem;
+      background: var(--ocean-deep);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .section-commitments::before {
+      content: 'CALIDAD';
+      position: absolute;
+      right: -1rem; bottom: -2rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 12rem;
+      font-weight: 900;
+      color: rgba(255,255,255,0.02);
+      pointer-events: none;
+    }
+
+    .section-commitments .section-label { color: var(--gold); }
+    .section-commitments .section-label::before { background: var(--gold); }
+    .section-commitments .section-title { color: var(--white); margin-bottom: 4rem; }
+
+    .commitments-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: rgba(255,255,255,0.06);
+    }
+
+    .commitment-item {
+      background: var(--ocean-deep);
+      padding: 2.5rem 3rem;
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+      transition: background 0.3s;
+    }
+    .commitment-item:hover { background: rgba(58,175,169,0.08); }
+
+    .commitment-icon {
+      font-size: 1.8rem;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    .commitment-item h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+    .commitment-item p { font-size: 0.87rem; line-height: 1.65; color: rgba(255,255,255,0.5); font-weight: 300; }
+
+    /* ── RESEÑAS ── */
+    .section-reviews {
+      padding: 7rem 8rem;
+      background: var(--white);
+      text-align: center;
+    }
+    .section-reviews .section-label { justify-content: center; }
+    .section-reviews .section-label::before { display: none; }
+    .section-reviews .section-title { margin: 0 auto 1rem; text-align: center; }
+
+    .reviews-intro {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--text-muted);
+      max-width: 500px;
+      margin: 0 auto 3rem;
+      font-weight: 300;
+    }
+
+    .reviews-cta-wrap { display: flex; flex-direction: column; align-items: center; gap: 1.5rem; }
+
+    .btn-google {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: var(--white);
+      color: var(--text);
+      border: 1px solid rgba(0,0,0,0.12);
+      padding: 1rem 2rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 500;
+      text-decoration: none;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      transition: all 0.25s;
+    }
+    .btn-google:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.15); transform: translateY(-2px); }
+    .btn-google-arrow { color: var(--gold); font-size: 1.1rem; }
+
+    .reviews-stars { display: flex; align-items: center; gap: 0.75rem; }
+    .stars { color: #FBBC05; font-size: 1.4rem; letter-spacing: 0.05em; }
+    .stars-label { font-size: 0.8rem; color: var(--text-muted); letter-spacing: 0.05em; text-transform: uppercase; }
+
+    /* ── CTA ── */
+    .section-cta {
+      padding: 7rem 8rem;
+      background: var(--sand-light);
+      text-align: center;
+    }
+
+    .cta-inner { max-width: 600px; margin: 0 auto; }
+    .cta-inner .section-label { justify-content: center; }
+    .cta-inner .section-label::before { display: none; }
+
+    .cta-inner h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 3vw, 3rem);
+      font-weight: 900;
+      color: var(--ocean-deep);
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+    }
+
+    .cta-inner p { font-size: 1rem; line-height: 1.75; color: var(--text-muted); margin-bottom: 2.5rem; font-weight: 300; }
+
+    .cta-btn {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--white);
+      padding: 1rem 2.5rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.25s;
+    }
+    .cta-btn:hover { background: var(--turquoise); transform: translateY(-2px); }
+
+    .cta-contact {
+      margin-top: 2.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+    .cta-contact-item { display: flex; align-items: center; gap: 0.6rem; font-size: 0.9rem; color: var(--text-muted); }
+    .cta-contact-item strong { color: var(--ocean-deep); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #0A1F30;
+      color: rgba(255,255,255,0.45);
+      padding: 2.5rem 4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      font-size: 0.8rem;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--white); }
+    .footer-logo span { color: var(--gold); }
+
+    .footer-links { display: flex; gap: 1.5rem; list-style: none; flex-wrap: wrap; }
+    .footer-links a { color: rgba(255,255,255,0.4); text-decoration: none; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--gold); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding-top: 1.2rem;
+      text-align: center;
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.2);
+    }
+
+    /* ── ANIMACIONES ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .hero-about .section-label { animation: fadeUp 0.7s ease both 0.1s; }
+    .hero-about h1 { animation: fadeUp 0.7s ease both 0.25s; }
+    .hero-about p  { animation: fadeUp 0.7s ease both 0.4s; }
+    .hero-stats-grid { animation: fadeUp 0.7s ease both 0.3s; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1100px) {
+      nav { padding: 1.2rem 2rem; }
+      .nav-links { display: none; }
+      .hero-about { grid-template-columns: 1fr; gap: 3rem; padding: 4rem 3rem 5rem; }
+      .hero-about::before { display: none; }
+      .section-story { grid-template-columns: 1fr; gap: 4rem; padding: 5rem 3rem; }
+      .section-diff, .section-commitments, .section-reviews, .section-cta { padding: 5rem 3rem; }
+      .diff-grid { grid-template-columns: 1fr 1fr; }
+      .commitments-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      body { overflow-x: hidden; }
+      nav { padding: 1rem 1.5rem; }
+      .nav-logo { font-size: 1rem; }
+      .hero-about { padding: 3rem 1.5rem 4rem; }
+      .hero-stats-grid { grid-template-columns: 1fr 1fr; }
+      .section-story, .section-diff, .section-commitments,
+      .section-reviews, .section-cta { padding: 4rem 1.5rem; }
+      .diff-grid { grid-template-columns: 1fr; }
+      .section-title { font-size: 1.8rem; }
+      .cta-contact { flex-direction: column; gap: 1rem; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+
+  <!-- HERO -->
+  <section class="hero-about">
+    <div>
+      <div class="section-label">Quiénes somos</div>
+      <h1>36 años viviendo<br>y <em>respirando</em><br>el turismo de<br>Torremolinos</h1>
+      <p>
+        No somos una empresa nueva que llegó a probar suerte. Llevamos más de tres décadas
+        en el sector turístico de la Costa del Sol, con 12 años especializados en la gestión
+        de apartamentos vacacionales en Torremolinos. Conocemos cada calle, cada temporada
+        y cada detalle que marca la diferencia entre un huésped satisfecho y uno que no vuelve.
+      </p>
+    </div>
+
+    <div class="hero-stats-grid">
+      <div class="hero-stat-card">
+        <div class="hero-stat-big">36</div>
+        <div class="hero-stat-label">Años en el sector turístico</div>
+      </div>
+      <div class="hero-stat-card">
+        <div class="hero-stat-big">12</div>
+        <div class="hero-stat-label">Años gestionando apartamentos</div>
+      </div>
+      <div class="hero-stat-card">
+        <div class="hero-stat-big">87</div>
+        <div class="hero-stat-label">Alojamientos activos ahora mismo</div>
+      </div>
+      <div class="hero-stat-card">
+        <div class="hero-stat-big">&lt;10'</div>
+        <div class="hero-stat-label">Tiempo máximo de respuesta presencial</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NUESTRA HISTORIA -->
+  <section class="section-story">
+    <div class="story-text">
+      <div class="section-label">Nuestra trayectoria</div>
+      <h2>Una historia construida<br><em>calle a calle</em></h2>
+      <p>
+        Empezamos en el turismo hace 36 años, cuando Torremolinos ya era un referente
+        de la Costa del Sol pero el alquiler vacacional tal como lo conocemos hoy ni existía.
+        Hemos vivido en primera persona la transformación del sector: de los primeros portales
+        online a Airbnb, de la reserva telefónica a la instantánea.
+      </p>
+      <p>
+        Hace 12 años dimos el salto a la gestión integral de apartamentos turísticos.
+        Desde entonces no hemos parado de crecer, siempre con el mismo principio:
+        el propietario cobra más y el viajero disfruta más. Ambas cosas son posibles
+        a la vez cuando la gestión se hace bien.
+      </p>
+      <p>
+        Hoy gestionamos 87 alojamientos activos en Torremolinos, contamos con
+        lavandería propia y un equipo que conoce el municipio mejor que nadie.
+      </p>
+    </div>
+
+    <div class="story-timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot">🏨</div>
+        <div class="timeline-content">
+          <div class="timeline-year">Hace 36 años</div>
+          <div class="timeline-title">Inicio en el sector turístico</div>
+          <div class="timeline-desc">Comienzo de una carrera profesional dedicada íntegramente al turismo en la Costa del Sol.</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot">🔑</div>
+        <div class="timeline-content">
+          <div class="timeline-year">Hace 12 años</div>
+          <div class="timeline-title">Especialización en gestión vacacional</div>
+          <div class="timeline-desc">Creación de Torremolinos Gestión Vacacional, enfocada al alquiler turístico de apartamentos en Torremolinos.</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot">🧺</div>
+        <div class="timeline-content">
+          <div class="timeline-year">Hito clave</div>
+          <div class="timeline-title">Lavandería propia</div>
+          <div class="timeline-desc">Inversión en lavandería propia para garantizar rapidez, calidad y control total en la ropa de cama y toallas de todos nuestros alojamientos.</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot">📍</div>
+        <div class="timeline-content">
+          <div class="timeline-year">Hoy</div>
+          <div class="timeline-title">87 alojamientos activos</div>
+          <div class="timeline-desc">Gestionamos 87 apartamentos en activo en toda Torremolinos, con presencia en las 150 calles más turísticas del municipio.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LO QUE NOS DIFERENCIA -->
+  <section class="section-diff">
+    <div class="section-label">Lo que nos diferencia</div>
+    <h2 class="section-title">Por qué nuestros propietarios no se van a otra gestora</h2>
+
+    <div class="diff-grid">
+
+      <div class="diff-card">
+        <span class="diff-icon">🧺</span>
+        <h3>Lavandería propia</h3>
+        <p>Contamos con lavandería propia, lo que nos garantiza rapidez, calidad constante y ahorro de costes en la ropa de cama y toallas de todos los apartamentos que gestionamos.</p>
+      </div>
+
+      <div class="diff-card">
+        <span class="diff-icon">⚡</span>
+        <h3>Menos de 10 minutos de respuesta</h3>
+        <p>Estamos a menos de 10 minutos de cualquier punto de Torremolinos. Si surge un problema en el apartamento, estamos allí antes de que el huésped pierda la paciencia.</p>
+      </div>
+
+      <div class="diff-card">
+        <span class="diff-icon">🛠️</span>
+        <h3>Lo arreglamos nosotros</h3>
+        <p>Si un cliente tiene algún problema con el alojamiento, lo resolvemos nosotros mismos sin esperar. Después pasamos la factura al propietario. La satisfacción del cliente no puede esperar.</p>
+      </div>
+
+      <div class="diff-card">
+        <span class="diff-icon">🎁</span>
+        <h3>Amenities en cada reserva</h3>
+        <p>Dejamos amenities de bienvenida en cada estancia, tanto para la cocina como para el baño. Un pequeño detalle que marca la diferencia en las valoraciones y en la experiencia del viajero.</p>
+      </div>
+
+      <div class="diff-card">
+        <span class="diff-icon">🧹</span>
+        <h3>Limpieza extra durante la estancia</h3>
+        <p>Si el cliente desea una limpieza adicional durante su estancia, ofrecemos ese servicio. Comodidad y flexibilidad para que cada huésped se sienta como en casa.</p>
+      </div>
+
+      <div class="diff-card">
+        <span class="diff-icon">🕐</span>
+        <h3>Flexibilidad con entrada y salida</h3>
+        <p>Aunque el check-in oficial es a partir de las 15:00h, si el apartamento está listo antes lo abrimos por la mañana. Y ofrecemos late check-out siempre que la ocupación lo permite.</p>
+      </div>
+
+      <div class="diff-card" style="grid-column: 1 / -1;">
+        <span class="diff-icon">🏠</span>
+        <h3>Tu apartamento también es tuyo</h3>
+        <p>Si quieres venir tú, un familiar o alguien de tu confianza, bloqueamos el apartamento para vosotros sin problema. Nos adaptamos completamente a las necesidades de cada propietario.</p>
+      </div>
+
+    </div>
+  </section>
+  <section class="section-commitments">
+    <div class="section-label">Nuestro compromiso</div>
+    <h2 class="section-title">Lo que puedes esperar de nosotros siempre</h2>
+
+    <div class="commitments-grid">
+      <div class="commitment-item">
+        <span class="commitment-icon">🤝</span>
+        <div>
+          <h4>Transparencia total</h4>
+          <p>Tú cobras directamente de Airbnb y Booking. Nosotros te facturamos nuestra comisión mensualmente. Sin sorpresas, sin movimientos que no conozcas.</p>
+        </div>
+      </div>
+      <div class="commitment-item">
+        <span class="commitment-icon">📊</span>
+        <div>
+          <h4>Informe mensual detallado</h4>
+          <p>Cada mes recibes un informe completo con reservas, ingresos, ocupación e incidencias. Sabes exactamente qué pasa con tu propiedad en todo momento.</p>
+        </div>
+      </div>
+      <div class="commitment-item">
+        <span class="commitment-icon">⭐</span>
+        <div>
+          <h4>Satisfacción del viajero primero</h4>
+          <p>Un huésped satisfecho es una valoración positiva. Una valoración positiva son más reservas. Por eso ponemos la experiencia del viajero por encima de todo.</p>
+        </div>
+      </div>
+      <div class="commitment-item">
+        <span class="commitment-icon">📍</span>
+        <div>
+          <h4>Presencia local real</h4>
+          <p>No gestionamos a distancia. Estamos en Torremolinos, conocemos cada calle y podemos actuar de forma presencial en menos de 10 minutos cuando hace falta.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEÑAS -->
+  <section class="section-reviews">
+    <div class="section-label">Lo que dicen</div>
+    <h2 class="section-title">Opiniones reales en Google</h2>
+    <p class="reviews-intro">
+      36 años de trayectoria y 87 alojamientos activos hablan por sí solos. Lee las valoraciones de propietarios y viajeros en nuestro perfil de Google Business.
+    </p>
+    <div class="reviews-cta-wrap">
+      <a href="https://share.google/XGr9yXy6RG7KVQ2ts" target="_blank" rel="noopener noreferrer" class="btn-google">
+        <svg width="20" height="20" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+          <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+          <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+          <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+        </svg>
+        Ver todas las reseñas en Google
+        <span class="btn-google-arrow">→</span>
+      </a>
+      <div class="reviews-stars">
+        <span class="stars">★★★★★</span>
+        <span class="stars-label">Valoración en Google Business</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-cta">
+    <div class="cta-inner">
+      <div class="section-label">Hablemos</div>
+      <h2>¿Tu apartamento merece una gestión así?</h2>
+      <p>
+        Primera consulta gratuita y sin compromiso. Te decimos exactamente
+        cuánto puede rendir tu piso y cómo lo gestionaríamos desde el primer día.
+      </p>
+      <a href="https://wa.me/34603658260?text=Hola,%20me%20interesa%20información%20sobre%20gestión%20de%20mi%20apartamento%20en%20Torremolinos" target="_blank" class="cta-btn">💬 Contactar por WhatsApp</a>
+      <div class="cta-contact">
+        <div class="cta-contact-item">
+          <span>📞</span>
+          <span><strong>+34 603 658 260</strong></span>
+        </div>
+        <div class="cta-contact-item">
+          <span>✉️</span>
+          <span><strong>info&#64;gestion-apartamentos-turisticos-torremolinos.com</strong></span>
+        </div>
+        <div class="cta-contact-item">
+          <span>📍</span>
+          <span>C. Campillos, 10, Torremolinos, Málaga</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-logo">Torremolinos <span>Gestión Vacacional</span></div>
+      <ul class="footer-links">
+        <li>Inicio</li>
+        <li>Servicios</li>
+        <li>Sobre mí</li>
+        <li>Las 150 calles</li>
+        <li><a href="https://wa.me/34603658260" target="_blank">WhatsApp</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <div style="display:flex;justify-content:center;gap:2.5rem;flex-wrap:wrap;margin-bottom:0.75rem;">
+        <span>📞 <a href="tel:+34603658260" style="color:rgba(255,255,255,0.4);text-decoration:none;">+34 603 658 260</a></span>
+        <span>✉️ info&#64;gestion-apartamentos-turisticos-torremolinos.com</span>
+        <span>📍 C. Campillos, 10, Torremolinos, Málaga</span>
+      </div>
+      © 2026 Torremolinos Gestión 
