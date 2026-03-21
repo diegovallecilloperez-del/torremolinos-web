@@ -829,7 +829,10 @@
       renderGrid(zone, search);
     }
 
-    // Cerrar panel al hacer clic fuera
-    document.addEventListener('click', function(e) {
-      const wrap = document.getElementById('searchInput').closest('.search-wrap');
-      if (!wrap.contains(e.target)
+    
+    // Render inicial
+    renderGrid('todas', '');
+  </script>
+
+</body>
+</html>
