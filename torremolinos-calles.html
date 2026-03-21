@@ -742,47 +742,9 @@
       return text.replace(re, '<mark>$1</mark>');
     }
 
-    // ── BUSCADOR INLINE ──
+    // ── BUSCADOR ──
     function filterStreets() {
       const query = document.getElementById('searchInput').value.trim();
-      const panel = document.getElementById('searchResultsPanel');
-      const list  = document.getElementById('searchResultsList');
-      const count = document.getElementById('searchResultsCount');
-      const hint  = document.getElementById('searchHint');
-
-      if (!query) {
-        panel.style.display = 'none';
-        hint.style.display = '';
-        renderGrid(currentZone, '');
-        return;
-      }
-
-      hint.style.display = 'none';
-      panel.style.display = 'block';
-
-      const results = calles.filter(c => normalize(c).includes(normalize(query)));
-
-      count.textContent = results.length + (results.length === 1 ? ' calle encontrada' : ' calles encontradas');
-
-      if (results.length === 0) {
-        list.innerHTML = `<div class="search-no-results">
-          No encontramos esa calle. ¿Tienes un apartamento ahí?
-          <a href="https://wa.me/34603658260?text=Hola,%20tengo%20un%20apartamento%20en%20Torremolinos%20y%20me%20interesa%20información"
-             target="_blank" style="color:var(--gold);display:block;margin-top:0.5rem;">
-            💬 Escríbenos por WhatsApp →
-          </a>
-        </div>`;
-        return;
-      }
-
-      list.innerHTML = results.map(calle => `
-        <a href="https://diegovallecilloperez-del.github.io/torremolinos-web/${toSlug(calle)}-torremolinos.html" target="_blank" class="search-result-item">
-          <span class="search-result-dot"></span>
-          <span class="search-result-name">${highlight(calle, query)}</span>
-          <span class="search-result-arrow">→</span>
-        </a>
-      `).join('');
-
       renderGrid(currentZone, query);
     }
 
