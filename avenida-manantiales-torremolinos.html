@@ -3,62 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- 
-    ══════════════════════════════════════════════════════════════
-    INSTRUCCIONES PARA PERSONALIZAR ESTA PLANTILLA
-    ══════════════════════════════════════════════════════════════
-    Busca y reemplaza estas etiquetas en toda la página:
-
-    Avenida de los Manantiales     → Ej: Calle San Miguel
-    avenida-de-los-manantiales → Ej: calle-san-miguel  (sin tildes, con guiones)
-    el centro de Torremolinos, muy cerca de la Calle San Miguel             → Ej: Centro de Torremolinos / La Carihuela / El Bajondillo
-    [DESCRIPCION_ZONA] → 2-3 frases sobre la zona: playa cercana, ambiente, etc.
-    Playa del Bajondillo (aprox. 1.000 m a pie, 13-15 min)    → Ej: Playa de la Carihuela (5 min a pie)
-    Supermercados, bancos, restaurantes y paradas de bus en la propia avenida. Zona Manantiales con todos los servicios. Centro de Torremolinos a 10 min a pie     → Ej: Chiringuitos y restaurantes de marisco
-    Paradas de bus M-110 y M-120 (paradas Río Bergantes e Isabel Manoja) a 2 min a pie. Terminal Torremolinos a 464 m (7 min a pie). Estación Cercanías El Pinillo a 14 min a pie       → Ej: Parada de bus línea 1 a 100 metros
-    Zona centro-norte de Torremolinos. Parque Acuático a 1.2 km · Centro comercial de Avenida Manantiales · Calle San Miguel a 10 min a pie → Ej: 10 minutos a pie del centro
-    [MAPS_EMBED_URL]   → URL del iframe de Google Maps de esa calle
-    foto-avenida-de-los-manantiales-torremolinos.jpg       → Nombre del archivo de tu foto: foto-calle-san-miguel.jpg
-    ══════════════════════════════════════════════════════════════
-  -->
-
   <title>Apartamentos Turísticos en Avenida de los Manantiales, Torremolinos | Torremolinos Gestión Vacacional</title>
-  <meta name="description" content="¿Tienes un apartamento en Avenida de los Manantiales, Torremolinos? Gestión profesional de apartamentos turísticos en pleno centro. A 900 m de la Playa del Bajondillo. Consulta gratuita.">
-  <meta name="keywords" content="apartamentos turísticos Avenida de los Manantiales Torremolinos, gestión vacacional Avenida de los Manantiales, alquiler vacacional Torremolinos centro, gestor apartamentos Avenida de los Manantiales">
-
-  <!-- Schema markup LocalBusiness — SEO LOCAL -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Torremolinos Gestión Vacacional",
-    "description": "Gestión profesional de apartamentos turísticos en Avenida de los Manantiales, Torremolinos",
-    "url": "https://sites.google.com/view/gestion-apartamentos-torremolinos/calles/avenida-de-los-manantiales",
-    "telephone": "+34603658260",
-    "email": "info@gestion-apartamentos-turisticos-torremolinos.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "C. Campillos, 10",
-      "addressLocality": "Torremolinos",
-      "addressRegion": "Málaga",
-      "addressCountry": "ES"
-    },
-    "areaServed": {
-      "@type": "Place",
-      "name": "Avenida de los Manantiales, Torremolinos, Málaga"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "36.6213",
-      "longitude": "-4.4996"
-    }
-  }
-  </script>
-
+  <meta name="description" content="¿Tienes un apartamento en Avenida de los Manantiales, Torremolinos? Gestión profesional con 36 años de experiencia. Consulta gratuita sin compromiso.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-
   <style>
     :root {
       --sand: #E8DDD0;
@@ -71,833 +19,241 @@
       --text: #1C1C1C;
       --text-muted: #6B6560;
     }
-
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--white);
-      color: var(--text);
-      overflow-x: hidden;
-    }
-
-    /* ── NAV ── */
-    nav {
-      position: relative;
-      padding: 1.2rem 3rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: rgba(253,250,246,0.98);
-      border-bottom: 1px solid rgba(201,150,58,0.15);
-    }
-
-    .nav-logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--ocean-deep);
-      text-decoration: none;
-    }
-    .nav-logo span { color: var(--gold); }
-
-    .nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; flex-wrap: wrap; }
-
-    .nav-links a {
-      text-decoration: none;
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      font-weight: 500;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-      transition: color 0.2s;
-    }
-    .nav-links a:hover { color: var(--ocean); }
-    .nav-links a.active { color: var(--ocean); border-bottom: 2px solid var(--gold); padding-bottom: 2px; }
-    .nav-cta { background: var(--ocean) !important; color: var(--white) !important; padding: 0.65rem 1.5rem; }
-    .nav-cta:hover { background: var(--gold) !important; }
-
-    /* ── BREADCRUMB ── */
-    .breadcrumb {
-      padding: 0.9rem 3rem;
-      background: var(--sand-light);
-      border-bottom: 1px solid var(--sand);
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-    }
-    .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
-    .breadcrumb a:hover { color: var(--gold); }
-    .breadcrumb .sep { color: var(--sand-dark, #C9B99A); }
-    .breadcrumb .current { color: var(--ocean-deep); font-weight: 500; }
-
-    /* ── HERO CALLE ── */
-    .hero-calle {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      min-height: 60vh;
-    }
-
-    .hero-calle-left {
-      background: var(--ocean-deep);
-      padding: 5rem 5rem 4rem 6rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-calle-left::after {
-      content: '';
-      position: absolute;
-      right: -60px; top: 0; bottom: 0;
-      width: 120px;
-      background: var(--ocean-deep);
-      clip-path: polygon(0 0, 0 100%, 100% 100%);
-      z-index: 2;
-    }
-
-    .hero-eyebrow {
-      font-size: 0.68rem;
-      font-weight: 500;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 1.2rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-    .hero-eyebrow::before { content: ''; display: block; width: 2rem; height: 1px; background: var(--gold); }
-
-    .hero-calle-left h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem, 3.5vw, 3.5rem);
-      font-weight: 900;
-      color: var(--white);
-      line-height: 1.1;
-      margin-bottom: 1.5rem;
-      position: relative;
-      z-index: 1;
-    }
-    .hero-calle-left h1 em { font-style: italic; color: var(--turquoise); }
-
-    .hero-calle-left p {
-      font-size: 1rem;
-      line-height: 1.75;
-      color: rgba(255,255,255,0.6);
-      font-weight: 300;
-      max-width: 400px;
-      margin-bottom: 2.5rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-calle-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: var(--gold);
-      color: var(--white);
-      padding: 1rem 2rem;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.85rem;
-      font-weight: 500;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      text-decoration: none;
-      transition: all 0.25s;
-      position: relative;
-      z-index: 1;
-      width: fit-content;
-    }
-    .hero-calle-btn:hover { background: var(--turquoise); transform: translateY(-2px); }
-
-    /* Hero foto */
-    .hero-calle-right {
-      position: relative;
-      overflow: hidden;
-      background: var(--sand);
-    }
-
-    .hero-calle-right img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-      display: block;
-    }
-
-    /* Placeholder si no hay foto */
-    .photo-placeholder {
-      width: 100%;
-      height: 100%;
-      min-height: 400px;
-      background: var(--sand);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-      color: var(--text-muted);
-    }
-    .photo-placeholder .ph-icon { font-size: 3rem; opacity: 0.4; }
-    .photo-placeholder p { font-size: 0.85rem; opacity: 0.6; text-align: center; max-width: 200px; }
-
-    .photo-badge {
-      position: absolute;
-      bottom: 1.5rem;
-      left: 1.5rem;
-      background: var(--ocean-deep);
-      color: var(--white);
-      padding: 0.5rem 1rem;
-      font-size: 0.7rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-
-    /* ── DATOS DE LA ZONA ── */
-    .section-zona {
-      padding: 5rem 8rem;
-      background: var(--white);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 6rem;
-      align-items: start;
-    }
-
-    .zona-text {}
-
-    .section-label {
-      font-size: 0.72rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-    .section-label::before { content: ''; display: block; width: 2rem; height: 1px; background: var(--gold); }
-
-    .zona-text h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.6rem, 2.5vw, 2.4rem);
-      font-weight: 700;
-      color: var(--ocean-deep);
-      line-height: 1.2;
-      margin-bottom: 1.5rem;
-    }
-
-    p {
-      text-align: justify;
-      text-align-last: left;
-    }
-
-    h1, h2, h3, h4, h5, h6,
-    .hero-eyebrow, .section-label, .section-title,
-    .zona-info-text, .cta-calle-title, .cta-detail,
-    .related-card, .street-card, .breadcrumb,
-    .nav-logo, .nav-links, .footer-logo, .footer-links,
-    .photo-badge, .servicio-card h3, .hero-calle-left h1 {
-      text-align: left !important;
-      text-align-last: left !important;
-    }
-
-    .zona-text p {
-      font-size: 0.97rem;
-      line-height: 1.85;
-      color: var(--text-muted);
-      font-weight: 300;
-      margin-bottom: 1.2rem;
-      padding-right: 1rem;
-    }
-
-    /* Info rápida de la zona */
-    .zona-info {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-      background: var(--sand-light);
-      border: 1px solid var(--sand);
-    }
-
-    .zona-info-row {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-      padding: 1.4rem 1.8rem;
-      border-bottom: 1px solid var(--sand);
-      transition: background 0.2s;
-    }
-    .zona-info-row:last-child { border-bottom: none; }
-    .zona-info-row:hover { background: var(--white); }
-
-    .zona-info-icon {
-      font-size: 1.2rem;
-      flex-shrink: 0;
-      margin-top: 0.1rem;
-    }
-
-    .zona-info-text strong {
-      display: block;
-      font-size: 0.7rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      font-weight: 500;
-      margin-bottom: 0.15rem;
-    }
-
-    .zona-info-text span {
-      font-size: 0.9rem;
-      color: var(--text);
-    }
-
-    /* ── MAPA DE GOOGLE ── */
-    .section-mapa {
-      padding: 0 8rem 5rem;
-      background: var(--white);
-    }
-
-    .section-mapa .section-label { margin-bottom: 1.5rem; }
-
-    .mapa-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--ocean-deep);
-      margin-bottom: 1.5rem;
-    }
-
-    .mapa-wrap {
-      width: 100%;
-      height: 420px;
-      border: 1px solid var(--sand);
-      overflow: hidden;
-      position: relative;
-    }
-
-    .mapa-wrap iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-      display: block;
-    }
-
-    /* Placeholder mapa */
-    .mapa-placeholder {
-      width: 100%;
-      height: 420px;
-      background: var(--sand-light);
-      border: 1px solid var(--sand);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-      color: var(--text-muted);
-    }
-    .mapa-placeholder .ph-icon { font-size: 3rem; opacity: 0.4; }
-    .mapa-placeholder p { font-size: 0.85rem; opacity: 0.7; text-align: center; max-width: 280px; }
-    .mapa-placeholder code {
-      background: var(--sand);
-      padding: 0.3rem 0.6rem;
-      font-size: 0.75rem;
-      color: var(--ocean);
-    }
-
-    /* ── SERVICIOS EN ESTA CALLE ── */
-    .section-servicios {
-      padding: 6rem 8rem;
-      background: var(--sand-light);
-    }
-
-    .section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.8rem, 3vw, 2.6rem);
-      font-weight: 700;
-      color: var(--ocean-deep);
-      line-height: 1.15;
-      max-width: 600px;
-      margin-bottom: 3rem;
-    }
-
-    .servicios-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2px;
-      background: var(--sand);
-    }
-
-    .servicio-card {
-      background: var(--white);
-      padding: 2rem 2rem;
-      position: relative;
-      overflow: hidden;
-      transition: background 0.3s;
-    }
-    .servicio-card:hover { background: var(--sand-light); }
-
-    .servicio-card::before {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      height: 3px;
-      background: var(--turquoise);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.4s;
-    }
-    .servicio-card:hover::before { transform: scaleX(1); }
-
-    .servicio-icon { font-size: 1.8rem; margin-bottom: 0.9rem; display: block; }
-
-    .servicio-card h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--ocean-deep);
-      margin-bottom: 0.5rem;
-    }
-
-    .servicio-card p { font-size: 0.85rem; line-height: 1.65; color: var(--text-muted); font-weight: 300; }
-
-    /* ── CTA CALLE ── */
-    .section-cta-calle {
-      padding: 6rem 8rem;
-      background: var(--ocean-deep);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 6rem;
-      align-items: center;
-    }
-
-    .cta-calle-left {}
-
-    .cta-calle-left .section-label { color: var(--gold); }
-    .cta-calle-left .section-label::before { background: var(--gold); }
-
-    .cta-calle-left h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.8rem, 3vw, 2.8rem);
-      font-weight: 900;
-      color: var(--white);
-      line-height: 1.15;
-      margin-bottom: 1.2rem;
-    }
-    .cta-calle-left h2 em { font-style: italic; color: var(--turquoise); }
-
-    .cta-calle-left p {
-      font-size: 0.97rem;
-      line-height: 1.8;
-      color: rgba(255,255,255,0.55);
-      font-weight: 300;
-    }
-
-    .cta-calle-right {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-      padding: 3rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1.2rem;
-    }
-
-    .cta-calle-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 0.5rem;
-    }
-
-    .cta-wa-btn {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      background: #25D366;
-      color: var(--white);
-      padding: 1rem 1.5rem;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.9rem;
-      font-weight: 500;
-      text-decoration: none;
-      transition: all 0.25s;
-      justify-content: center;
-    }
-    .cta-wa-btn:hover { background: #1ebe5d; transform: translateY(-2px); }
-
-    .cta-tel-btn {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      background: transparent;
-      color: var(--white);
-      padding: 1rem 1.5rem;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.9rem;
-      font-weight: 500;
-      text-decoration: none;
-      border: 1px solid rgba(255,255,255,0.2);
-      transition: all 0.25s;
-      justify-content: center;
-    }
-    .cta-tel-btn:hover { border-color: var(--gold); color: var(--gold); }
-
-    .cta-calle-details { display: flex; flex-direction: column; gap: 0.6rem; padding-top: 0.5rem; }
-
-    .cta-detail {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      font-size: 0.82rem;
-      color: rgba(255,255,255,0.5);
-    }
-
-    /* ── CALLES RELACIONADAS ── */
-    .section-related {
-      padding: 5rem 8rem;
-      background: var(--white);
-    }
-
-    .related-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1px;
-      background: var(--sand);
-      margin-top: 2rem;
-    }
-
-    .related-card {
-      background: var(--white);
-      padding: 1.2rem 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      text-decoration: none;
-      transition: background 0.2s;
-    }
-    .related-card:hover { background: var(--sand-light); }
-
-    .related-dot {
-      width: 6px; height: 6px;
-      border-radius: 50%;
-      background: var(--turquoise);
-      flex-shrink: 0;
-      opacity: 0.5;
-    }
-    .related-card:hover .related-dot { opacity: 1; }
-
-    .related-card span {
-      font-size: 0.82rem;
-      color: var(--text);
-    }
-
-    .related-more {
-      margin-top: 1.5rem;
-      text-align: center;
-    }
-
-    .btn-outline {
-      display: inline-block;
-      background: transparent;
-      color: var(--ocean);
-      padding: 0.85rem 2rem;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.85rem;
-      font-weight: 500;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      border: 1px solid var(--ocean);
-      text-decoration: none;
-      transition: all 0.25s;
-    }
-    .btn-outline:hover { background: var(--ocean); color: var(--white); }
-
-    /* ── FOOTER ── */
-    footer {
-      background: #0A1F30;
-      color: rgba(255,255,255,0.45);
-      padding: 2.5rem 4rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-      font-size: 0.8rem;
-    }
-
-    .footer-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-    }
-
-    .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--white); }
+    body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--text); }
+    p { text-align: justify; text-align-last: left; }
+    h1, h2, h3, h4 { text-align: left; }
+
+    /* BREADCRUMB */
+    .breadcrumb { padding: 0.8rem 4rem; background: var(--sand-light); font-size: 0.78rem; color: var(--text-muted); border-bottom: 1px solid var(--sand); }
+
+    /* HERO */
+    .hero { display: grid; grid-template-columns: 1fr 1fr; min-height: 480px; }
+    .hero-left { background: var(--ocean-deep); padding: 4rem; display: flex; flex-direction: column; justify-content: center; }
+    .hero-eyebrow { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+    .hero-title { font-family: 'Playfair Display', serif; font-size: 2.8rem; font-weight: 900; color: var(--white); line-height: 1.1; margin-bottom: 1.5rem; }
+    .hero-title em { color: var(--turquoise); font-style: italic; }
+    .hero-desc { font-size: 0.95rem; color: rgba(255,255,255,0.7); line-height: 1.7; margin-bottom: 2rem; font-weight: 300; }
+    .hero-btn { display: inline-block; background: var(--gold); color: white; padding: 1rem 2rem; text-decoration: none; font-size: 0.82rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; }
+    .hero-right { position: relative; overflow: hidden; background: var(--sand); }
+    .hero-right img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .hero-badge { position: absolute; bottom: 1.5rem; left: 1.5rem; background: rgba(13,46,69,0.9); color: white; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.5rem 1rem; }
+
+    /* DATOS ZONA */
+    .section-datos { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+    .datos-texto { padding: 4rem; background: var(--white); }
+    .datos-info { padding: 4rem; background: var(--sand-light); }
+    .section-label { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; color: var(--ocean-deep); margin-bottom: 1.5rem; line-height: 1.3; }
+    .datos-texto p { font-size: 0.95rem; line-height: 1.8; color: var(--text-muted); font-weight: 300; margin-bottom: 1rem; }
+    .info-item { display: flex; gap: 1rem; padding: 1.2rem 0; border-bottom: 1px solid var(--sand); align-items: flex-start; }
+    .info-item:last-child { border-bottom: none; }
+    .info-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 2px; }
+    .info-label { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.25rem; }
+    .info-value { font-size: 0.88rem; color: var(--text); font-weight: 500; line-height: 1.5; }
+
+    /* MAPA */
+    .section-mapa { padding: 4rem; background: var(--white); border-top: 1px solid var(--sand); }
+    .mapa-title { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; color: var(--ocean-deep); margin-bottom: 2rem; }
+    .mapa-box { background: var(--sand-light); border: 1px solid var(--sand); padding: 3rem; text-align: center; }
+    .mapa-emoji { font-size: 3rem; margin-bottom: 1rem; }
+    .mapa-nombre { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--ocean-deep); margin-bottom: 0.5rem; }
+    .mapa-hint { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+    .mapa-btn { display: inline-block; background: var(--gold); color: white; padding: 0.85rem 2rem; text-decoration: none; font-size: 0.82rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; }
+
+    /* SERVICIOS */
+    .section-servicios { padding: 4rem; background: var(--sand-light); }
+    .servicios-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2rem; }
+    .servicio-card { background: var(--white); padding: 2rem; }
+    .servicio-icon { font-size: 1.8rem; margin-bottom: 1rem; }
+    .servicio-card h3 { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: var(--ocean-deep); margin-bottom: 0.75rem; text-align: left; }
+    .servicio-card p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; font-weight: 300; }
+
+    /* CTA */
+    .section-cta { display: grid; grid-template-columns: 1fr 1fr; background: var(--ocean-deep); }
+    .cta-left { padding: 4rem; }
+    .cta-left h2 { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: var(--white); margin-bottom: 1rem; line-height: 1.3; text-align: left; }
+    .cta-left p { font-size: 0.92rem; color: rgba(255,255,255,0.6); line-height: 1.7; font-weight: 300; }
+    .cta-right { padding: 4rem; display: flex; flex-direction: column; justify-content: center; gap: 1rem; border-left: 1px solid rgba(255,255,255,0.1); }
+    .cta-title { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .btn-wa { display: block; background: #25D366; color: white; padding: 1.1rem 2rem; text-decoration: none; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; text-align: center; }
+    .btn-tel { display: block; border: 1px solid rgba(255,255,255,0.3); color: rgba(255,255,255,0.8); padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; font-weight: 400; text-align: center; }
+    .cta-checks { margin-top: 1.5rem; }
+    .cta-check { font-size: 0.78rem; color: rgba(255,255,255,0.5); margin-bottom: 0.4rem; }
+
+    /* CALLES RELACIONADAS */
+    .section-related { padding: 4rem; background: var(--white); }
+    .related-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--sand); margin-top: 2rem; }
+    .related-item { background: var(--white); padding: 1.5rem; }
+    .related-dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--turquoise); margin-right: 0.5rem; }
+    .related-name { font-size: 0.88rem; color: var(--ocean-deep); font-weight: 500; }
+
+    /* FOOTER */
+    footer { background: var(--ocean-deep); padding: 3rem 4rem; }
+    .footer-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem; }
+    .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--white); }
     .footer-logo span { color: var(--gold); }
+    .footer-links { display: flex; gap: 2rem; list-style: none; flex-wrap: wrap; }
+    .footer-links li { font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.4); }
+    .footer-contact { display: flex; gap: 2rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+    .footer-contact span { font-size: 0.82rem; color: rgba(255,255,255,0.5); }
+    .footer-contact a { color: rgba(255,255,255,0.5); text-decoration: none; }
+    .footer-bottom { font-size: 0.75rem; color: rgba(255,255,255,0.25); border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.5rem; }
 
-    .footer-links { display: flex; gap: 1.5rem; list-style: none; flex-wrap: wrap; }
-    .footer-links a { color: rgba(255,255,255,0.4); text-decoration: none; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; transition: color 0.2s; }
-    .footer-links a:hover { color: var(--gold); }
-
-    .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.06);
-      padding-top: 1.2rem;
-      text-align: center;
-      font-size: 0.72rem;
-      color: rgba(255,255,255,0.2);
-    }
-
-    /* ── ANIMACIONES ── */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    .hero-eyebrow { animation: fadeUp 0.7s ease both 0.1s; }
-    .hero-calle-left h1 { animation: fadeUp 0.7s ease both 0.25s; }
-    .hero-calle-left p  { animation: fadeUp 0.7s ease both 0.4s; }
-    .hero-calle-btn     { animation: fadeUp 0.7s ease both 0.55s; }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 1100px) {
-      nav { padding: 1.2rem 2rem; }
-      .nav-links { display: none; }
-      .hero-calle { grid-template-columns: 1fr; }
-      .hero-calle-right { min-height: 300px; }
-      .hero-calle-left { padding: 4rem 3rem; }
-      .hero-calle-left::after { display: none; }
-      .section-zona { grid-template-columns: 1fr; gap: 3rem; padding: 5rem 3rem; }
-      .section-mapa { padding: 0 3rem 4rem; }
-      .section-servicios { padding: 5rem 3rem; }
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .hero, .section-datos, .section-cta { grid-template-columns: 1fr; }
+      .hero-right { height: 300px; }
+      .cta-right { border-left: none; border-top: 1px solid rgba(255,255,255,0.1); }
       .servicios-grid { grid-template-columns: 1fr 1fr; }
-      .section-cta-calle { grid-template-columns: 1fr; gap: 3rem; padding: 5rem 3rem; }
-      .section-related { padding: 4rem 3rem; }
-      .related-grid { grid-template-columns: repeat(2, 1fr); }
+      .related-grid { grid-template-columns: 1fr 1fr; }
     }
-
     @media (max-width: 600px) {
-      body { overflow-x: hidden; }
-      nav { padding: 1rem 1.5rem; }
-      .nav-logo { font-size: 1rem; }
-      .breadcrumb { padding: 0.9rem 1.5rem; }
-      .hero-calle-left { padding: 3rem 1.5rem 3rem 1.5rem; }
-      .section-zona, .section-servicios, .section-related { padding: 4rem 1.8rem; }
-      .section-mapa { padding: 0 1.8rem 3rem; }
-      .mapa-wrap, .mapa-placeholder { height: 280px; }
-      .section-cta-calle { padding: 4rem 1.8rem; }
-      .servicios-grid { grid-template-columns: 1fr; }
-      .related-grid { grid-template-columns: repeat(2, 1fr); }
-      .zona-text p, .zona-info-text span, .cta-calle-left p { padding-right: 0.5rem; }
+      .hero-left, .datos-texto, .datos-info, .section-mapa, .section-servicios, .cta-left, .cta-right, .section-related { padding: 2.5rem 1.5rem; }
+      .breadcrumb { padding: 0.8rem 1.5rem; }
+      .hero-title { font-size: 2rem; }
+      .servicios-grid, .related-grid { grid-template-columns: 1fr; }
+      footer { padding: 2.5rem 1.5rem; }
     }
   </style>
 </head>
 <body>
 
-
-  <!-- BREADCRUMB -->
-  <div class="breadcrumb">
-    Inicio
-    <span class="sep">›</span>
-    Las 150 calles
-    <span class="sep">›</span>
-    <span class="current">Avenida de los Manantiales</span>
-  </div>
+  <div class="breadcrumb">Inicio › Las 150 calles › Avenida de los Manantiales</div>
 
   <!-- HERO -->
-  <section class="hero-calle">
-    <div class="hero-calle-left">
+  <section class="hero">
+    <div class="hero-left">
       <div class="hero-eyebrow">Apartamentos Turísticos · Torremolinos</div>
-      <h1>
-        Gestión de apartamentos en<br>
-        <em>Avenida de los Manantiales</em>,<br>
-        Torremolinos
-      </h1>
-      <p>
-        ¿Tienes un apartamento en Avenida de los Manantiales? Maximiza tus ingresos con el gestor
-        más local de Torremolinos. 36 años de experiencia, 87 apartamentos en gestión
-        y presencia física en menos de 10 minutos.
-      </p>
-      <a
-        href="https://wa.me/34603658260?text=Hola,%20me%20interesa%20información%20sobre%20gestión%20de%20mi%20apartamento%20en%20Avenida de los Manantiales,%20Torremolinos"
-        target="_blank"
-        class="hero-calle-btn"
-      >
-        💬 Consulta gratuita por WhatsApp
-      </div>
+      <h1 class="hero-title">Gestión de apartamentos en <em>Avenida de los Manantiales</em>, Torremolinos</h1>
+      <p class="hero-desc">¿Tienes un apartamento en Avenida de los Manantiales? Maximiza tus ingresos con el gestor más local de Torremolinos. 36 años de experiencia, 87 apartamentos en gestión y presencia física en menos de 10 minutos.</p>
+      <a href="https://wa.me/34603658260?text=Hola,%20me%20interesa%20información%20sobre%20gestión%20de%20mi%20apartamento%20en%20Avenida%20de%20los%20Manantiales,%20Torremolinos" target="_blank" class="hero-btn">💬 Consulta gratuita por WhatsApp</a>
     </div>
-
-    <div class="hero-calle-right">
-      <img src="https://lh3.googleusercontent.com/pw/AP1GczN4FeJiBVO5YPizADQ_Lpw8rtLcI4uiMuHNao1TCU9RWN6mlVmVn5RuGgySEbJxp3bwfYXMlcBajUZifF0IF7nlWIkZtEp4NryTlHbL4Kt_58VpPHA=w1200-h900-no" alt="Avenida de los Manantiales, Torremolinos — Gestión apartamentos turísticos" style="width:100%;height:100%;object-fit:cover;display:block;">
-      <div class="photo-badge">📍 Avenida de los Manantiales · Torremolinos</div>
+    <div class="hero-right">
+      <img src="https://lh3.googleusercontent.com/pw/AP1GczN4FeJiBVO5YPizADQ_Lpw8rtLcI4uiMuHNao1TCU9RWN6mlVmVn5RuGgySEbJxp3bwfYXMlcBajUZifF0IF7nlWIkZtEp4NryTlHbL4Kt_58VpPHA=w1200-h900-no" alt="Foto" style="width:100%;height:100%;object-fit:cover;display:block;">
+      <div class="hero-badge">📍 Avenida de los Manantiales · Torremolinos</div>
     </div>
   </section>
 
   <!-- DATOS DE LA ZONA -->
-  <section class="section-zona">
-    <div class="zona-text">
+  <section class="section-datos">
+    <div class="datos-texto">
       <div class="section-label">La zona</div>
-      <h2>Todo sobre Avenida de los Manantiales en Torremolinos</h2>
-      <p>
-        Avenida de los Manantiales es una calle céntrica de Torremolinos con 564 metros de longitud,
-        situada muy próxima a la Avenida del Lido y a Calle Campillos. Su posición
-        privilegiada la hace muy demandada por viajeros que buscan alojamiento bien
-        comunicado, con todos los servicios a pie de calle y acceso fácil a la playa.
-      </p>
-      <p>
-        La Playa del Bajondillo, una de las más populares de la Costa del Sol con más de
-        un kilómetro de longitud, se encuentra a aproximadamente 750 metros de la calle,
-        unos 10-12 minutos caminando por la Cuesta del Tajo o el Camino de la Playa.
-        Los apartamentos en esta zona tienen gran demanda durante todo el año gracias
-        a su céntrica ubicación y excelente conectividad.
-      </p>
-      <p>
-        Si tienes un apartamento en Avenida de los Manantiales, podemos ayudarte a maximizar su
-        rendimiento con gestión profesional, presencia en todas las plataformas y el
-        SEO local más potente de Torremolinos. Desde nuestra oficina en C. Campillos, 10,
-        estamos a menos de 5 minutos a pie de Avenida de los Manantiales.
-      </p>
+      <h2 class="section-title">Todo sobre Avenida de los Manantiales en Torremolinos</h2>
+      <p>Avenida de los Manantiales es una de las avenidas más importantes de Torremolinos, con 657 metros de longitud y una amplia oferta de servicios: supermercados, bancos, restaurantes y farmacias.</p><p>La Playa del Bajondillo se encuentra a unos 1.000 metros. Su excelente conectividad en bus — con paradas a tan solo 2 minutos — la convierte en una opción muy valorada para el turismo familiar.</p>
     </div>
-
-    <div class="zona-info">
-      <div class="zona-info-row">
-        <span class="zona-info-icon">🏖️</span>
-        <div class="zona-info-text">
-          <strong>Playa más cercana</strong>
-          <span>Playa del Bajondillo (aprox. 1.000 m a pie, 13-15 min)</span>
+    <div class="datos-info">
+      <div class="section-label">Datos clave</div>
+      <div class="info-item">
+        <span class="info-icon">🏖️</span>
+        <div>
+          <div class="info-label">Playa más cercana</div>
+          <div class="info-value">Playa del Bajondillo (aprox. 1.000 m, 13-15 min a pie)</div>
         </div>
       </div>
-      <div class="zona-info-row">
-        <span class="zona-info-icon">🍽️</span>
-        <div class="zona-info-text">
-          <strong>Restauración</strong>
-          <span>Supermercados, bancos, restaurantes y paradas de bus en la propia avenida. Zona Manantiales con todos los servicios. Centro de Torremolinos a 10 min a pie</span>
+      <div class="info-item">
+        <span class="info-icon">🍽️</span>
+        <div>
+          <div class="info-label">Restauración</div>
+          <div class="info-value">Supermercados, bancos, restaurantes y paradas de bus en la propia avenida. Centro a 10 min</div>
         </div>
       </div>
-      <div class="zona-info-row">
-        <span class="zona-info-icon">🚌</span>
-        <div class="zona-info-text">
-          <strong>Transporte</strong>
-          <span>Paradas de bus M-110 y M-120 (paradas Río Bergantes e Isabel Manoja) a 2 min a pie. Terminal Torremolinos a 464 m (7 min a pie). Estación Cercanías El Pinillo a 14 min a pie</span>
+      <div class="info-item">
+        <span class="info-icon">🚌</span>
+        <div>
+          <div class="info-label">Transporte</div>
+          <div class="info-value">Paradas bus M-110 y M-120 (Río Bergantes e Isabel Manoja) a 2 min. Terminal Torremolinos a 464 m (7 min)</div>
         </div>
       </div>
-      <div class="zona-info-row">
-        <span class="zona-info-icon">🏛️</span>
-        <div class="zona-info-text">
-          <strong>Distancia al centro</strong>
-          <span>Zona centro-norte de Torremolinos. Parque Acuático a 1.2 km · Centro comercial de Avenida Manantiales · Calle San Miguel a 10 min a pie</span>
+      <div class="info-item">
+        <span class="info-icon">📍</span>
+        <div>
+          <div class="info-label">Distancia al centro</div>
+          <div class="info-value">Zona centro-norte. Parque Acuático a 1.2 km. Calle San Miguel a 10 min</div>
         </div>
       </div>
-      <div class="zona-info-row">
-        <span class="zona-info-icon">⏱️</span>
-        <div class="zona-info-text">
-          <strong>Nuestra respuesta presencial</strong>
-          <span>Menos de 10 minutos desde C. Campillos, 10</span>
+      <div class="info-item">
+        <span class="info-icon">⚡</span>
+        <div>
+          <div class="info-label">Nuestra respuesta presencial</div>
+          <div class="info-value">Menos de 10 minutos desde C. Campillos, 10</div>
         </div>
       </div>
-      <div class="zona-info-row">
-        <span class="zona-info-icon">📊</span>
-        <div class="zona-info-text">
-          <strong>Ocupación media anual</strong>
-          <span>Hasta el 92% con gestión profesional</span>
+      <div class="info-item">
+        <span class="info-icon">📊</span>
+        <div>
+          <div class="info-label">Ocupación media anual</div>
+          <div class="info-value">Hasta el 92% con gestión profesional</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- MAPA GOOGLE -->
+  <!-- MAPA -->
   <section class="section-mapa">
     <div class="section-label">Ubicación exacta</div>
     <div class="mapa-title">Dónde está Avenida de los Manantiales en Torremolinos</div>
-
-    <!--
-      INSTRUCCIÓN para insertar el mapa:
-      1. Ve a Google Maps y busca "Avenida de los Manantiales, Torremolinos"
-      2. Pulsa Compartir → Insertar un mapa → Copiar HTML
-      3. Sustituye el bloque .mapa-placeholder por el <iframe> que te da Google
-      
-      Ejemplo de cómo debe quedar:
-      <div class="mapa-wrap">
-        <iframe src="https://www.google.com/maps/embed?pb=..." allowfullscreen="" loading="lazy"></iframe>
-      </div>
-    -->
-    <div class="mapa-wrap" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.5rem;padding:3rem;background:#F5F0EA;border:1px solid #E8DDD0;min-height:280px;">
-      <div style="font-size:3rem;">🗺️</div>
-      <div style="text-align:center;">
-        <div style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--ocean-deep);margin-bottom:0.5rem;">Avenida de los Manantiales, Torremolinos</div>
-        <div style="font-size:0.85rem;color:var(--text-muted);margin-bottom:1.5rem;">Haz clic para ver la ubicación exacta en Google Maps</div>
-        <a href="https://www.google.com/maps/search/Avenida+de+los+Manantiales+Torremolinos+Málaga" target="_blank" style="background:#C9963A;color:white;padding:0.85rem 2rem;text-decoration:none;font-size:0.85rem;font-weight:500;letter-spacing:0.05em;text-transform:uppercase;display:inline-block;">📍 Ver en Google Maps →</a>
-      </div>
+    <div class="mapa-box">
+      <div class="mapa-emoji">🗺️</div>
+      <div class="mapa-nombre">Avenida de los Manantiales, Torremolinos</div>
+      <div class="mapa-hint">Haz clic para ver la ubicación exacta en Google Maps</div>
+      <a href="https://www.google.com/maps/search/Avenida+de+los+Manantiales+Torremolinos+Málaga" target="_blank" class="mapa-btn">📍 Ver en Google Maps →</a>
     </div>
   </section>
 
-  <!-- SERVICIOS EN ESTA CALLE -->
+  <!-- SERVICIOS -->
   <section class="section-servicios">
     <div class="section-label">Lo que ofrecemos</div>
     <h2 class="section-title">Gestión integral de tu apartamento en Avenida de los Manantiales</h2>
-
     <div class="servicios-grid">
       <div class="servicio-card">
-        <span class="servicio-icon">📣</span>
+        <div class="servicio-icon">📢</div>
         <h3>Publicación optimizada</h3>
-        <p>Tu apartamento en Airbnb, Booking y más plataformas con anuncio SEO optimizado para Avenida de los Manantiales y Torremolinos.</p>
+        <p>Tu apartamento en Airbnb, Booking y más plataformas con anuncio SEO optimizado para Avenida de los Manantiales y fotografía profesional.</p>
       </div>
       <div class="servicio-card">
-        <span class="servicio-icon">🔑</span>
+        <div class="servicio-icon">🔑</div>
         <h3>Check-in presencial</h3>
         <p>Recibimos a cada huésped en persona en tu apartamento de Avenida de los Manantiales. Nunca dejamos a nadie esperando.</p>
       </div>
       <div class="servicio-card">
-        <span class="servicio-icon">🧹</span>
+        <div class="servicio-icon">🧹</div>
         <h3>Limpieza con lavandería propia</h3>
         <p>Limpieza profesional entre estancias y ropa de cama de nuestra propia lavandería. Calidad y rapidez garantizadas.</p>
       </div>
       <div class="servicio-card">
-        <span class="servicio-icon">⚡</span>
-        <h3>Respuesta en &lt;10 minutos</h3>
-        <p>Estamos a menos de 10 minutos de Avenida de los Manantiales. Cualquier incidencia, la resolvemos nosotros antes de que se convierta en un problema.</p>
+        <div class="servicio-icon">🛎️</div>
+        <h3>Atención 24/7</h3>
+        <p>Cualquier incidencia resuelta en menos de 10 minutos de forma presencial. Estamos a minutos de Avenida de los Manantiales.</p>
       </div>
       <div class="servicio-card">
-        <span class="servicio-icon">🎁</span>
-        <h3>Amenities de bienvenida</h3>
-        <p>Dejamos amenities en cocina y baño en cada reserva. Un detalle que dispara las valoraciones positivas.</p>
+        <div class="servicio-icon">💰</div>
+        <h3>Cobras directamente</h3>
+        <p>El dinero de Airbnb y Booking va directamente a tu cuenta. Nosotros te facturamos nuestra comisión mensualmente.</p>
       </div>
       <div class="servicio-card">
-        <span class="servicio-icon">📊</span>
-        <h3>Informe mensual</h3>
-        <p>Cobras directamente de Airbnb y Booking. Nosotros te enviamos un informe mensual y te facturamos nuestra comisión.</p>
+        <div class="servicio-icon">📅</div>
+        <h3>Tu apartamento sigue siendo tuyo</h3>
+        <p>Bloquea el apartamento cuando quieras para tu uso personal o de tu familia. Sin restricciones.</p>
       </div>
     </div>
   </section>
 
-  <!-- CTA CALLE -->
-  <section class="section-cta-calle">
-    <div class="cta-calle-left">
-      <div class="section-label">¿Tienes un apartamento aquí?</div>
-      <h2>Tu apartamento en <em>Avenida de los Manantiales</em> puede rendir mucho más</h2>
-      <p>
-        Primera consulta gratuita y sin compromiso. Te decimos exactamente cuánto
-        puede ganar tu apartamento y cómo lo gestionaríamos desde el primer día.
-        Sin letra pequeña, sin cuotas fijas: solo cobramos cuando tú cobras.
-      </p>
+  <!-- CTA -->
+  <section class="section-cta">
+    <div class="cta-left">
+      <h2>Tu apartamento en <em style="color:var(--turquoise);font-style:italic;">Avenida de los Manantiales</em> puede rendir mucho más</h2>
+      <p>Primera consulta gratuita y sin compromiso. Te decimos exactamente cuánto puede ganar tu apartamento y cómo lo gestionaríamos desde el primer día. Sin letra pequeña, solo cobramos cuando tú cobras.</p>
     </div>
-
-    <div class="cta-calle-right">
-      <div class="cta-calle-title">Contacta ahora — es gratis</div>
-      <a href="https://wa.me/34603658260?text=Hola,%20me%20interesa%20información%20sobre%20gestión%20de%20mi%20apartamento%20en%20Avenida de los Manantiales,%20Torremolinos" target="_blank" class="cta-wa-btn">💬 Escribir por WhatsApp</a>
-      <a href="tel:+34603658260" class="cta-tel-btn">
-        📞 Llamar: +34 603 658 260
-      </a>
-      <div class="cta-calle-details">
-        <div class="cta-detail">✓ Primera consulta gratuita</div>
-        <div class="cta-detail">✓ Sin permanencias ni cuotas fijas</div>
-        <div class="cta-detail">✓ Respuesta en menos de 24 horas</div>
-        <div class="cta-detail">✓ 36 años de experiencia en turismo</div>
+    <div class="cta-right">
+      <div class="cta-title">Contacta ahora — es gratis</div>
+      <a href="https://wa.me/34603658260?text=Hola,%20me%20interesa%20información%20sobre%20gestión%20de%20mi%20apartamento%20en%20Avenida%20de%20los%20Manantiales,%20Torremolinos" target="_blank" class="btn-wa">💬 Escribir por WhatsApp</a>
+      <a href="tel:+34603658260" class="btn-tel">📞 +34 603 658 260</a>
+      <div class="cta-checks">
+        <div class="cta-check">✓ Primera consulta gratuita</div>
+        <div class="cta-check">✓ Sin permanencias ni cuotas fijas</div>
+        <div class="cta-check">✓ Respuesta en menos de 24 horas</div>
+        <div class="cta-check">✓ 36 años de experiencia en turismo</div>
       </div>
     </div>
   </section>
@@ -905,36 +261,14 @@
   <!-- CALLES RELACIONADAS -->
   <section class="section-related">
     <div class="section-label">Otras calles cercanas</div>
-    <h2 class="section-title" style="margin-bottom:1rem;font-size:1.5rem;">También gestionamos apartamentos en</h2>
-    <p style="font-size:0.9rem;color:var(--text-muted);margin-bottom:2rem;font-weight:300;">
-      Cubrimos las 150 calles más turísticas de Torremolinos.
-    </p>
-
-    <!--
-      INSTRUCCIÓN: Sustituye estas tarjetas por las calles más cercanas
-      a Avenida de los Manantiales geográficamente.
-    -->
+    <h2 class="section-title" style="font-size:1.3rem;margin-bottom:0.5rem;">También gestionamos apartamentos en</h2>
+    <p style="font-size:0.88rem;color:var(--text-muted);margin-bottom:0;">Cubrimos las 150 calles más turísticas de Torremolinos.</p>
     <div class="related-grid">
-      <div class="related-card">
-        <span class="related-dot"></span>
-        <span>Calle San Miguel</span>
-      </div>
-      <div class="related-card">
-        <span class="related-dot"></span>
-        <span>Calle Campillos</span>
-      </div>
-      <div class="related-card">
-        <span class="related-dot"></span>
-        <span>Calle Cauce</span>
-      </div>
-      <div class="related-card">
-        <span class="related-dot"></span>
-        <span>Avenida del Lido</span>
-      </div>
-    </div>
+            <div class="related-item"><span class="related-dot"></span><span class="related-name">Calle Campillos</span></div>
+      <div class="related-item"><span class="related-dot"></span><span class="related-name">Calle Ramal de los Manantiales</span></div>
+      <div class="related-item"><span class="related-dot"></span><span class="related-name">Calle Isabel Manoja</span></div>
+      <div class="related-item"><span class="related-dot"></span><span class="related-name">Calle San Miguel</span></div>
 
-    <div class="related-more">
-      Ver las 150 calles →
     </div>
   </section>
 
@@ -947,18 +281,15 @@
         <li>Servicios</li>
         <li>Sobre mí</li>
         <li>Las 150 calles</li>
-        <li><a href="https://wa.me/34603658260" target="_blank">WhatsApp</a></li>
+        <li><a href="https://wa.me/34603658260" target="_blank" style="color:rgba(255,255,255,0.4);text-decoration:none;">WhatsApp</a></li>
       </ul>
     </div>
-    <div class="footer-bottom">
-      <div style="display:flex;justify-content:center;gap:2.5rem;flex-wrap:wrap;margin-bottom:0.75rem;">
-        <span>📞 <a href="tel:+34603658260" style="color:rgba(255,255,255,0.4);text-decoration:none;">+34 603 658 260</a></span>
-        <span>✉️ info&#64;gestion-apartamentos-turisticos-torremolinos.com</span>
-        <span>📍 C. Campillos, 10, Torremolinos, Málaga</span>
-      </div>
-      © 2026 Torremolinos Gestión
-
+    <div class="footer-contact">
+      <span>📞 <a href="tel:+34603658260">+34 603 658 260</a></span>
+      <span>✉️ info&#64;gestion-apartamentos-turisticos-torremolinos.com</span>
+      <span>📍 C. Campillos, 10, Torremolinos, Málaga</span>
     </div>
+    <div class="footer-bottom">© 2026 Torremolinos Gestión Vacacional · Torremolinos, Málaga</div>
   </footer>
 
 </body>
